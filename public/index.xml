@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chance&#39;s Sketchpad</title>
+    <link>/</link>
+    <description>Recent content on Chance&#39;s Sketchpad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Nov 2023 15:32:11 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week1</title>
+      <link>/post/week1/</link>
+      <pubDate>Fri, 03 Nov 2023 15:32:11 -0400</pubDate>
+      
+      <guid>/post/week1/</guid>
+      <description>Test</description>
+    </item>
+    
+    <item>
+      <title>Readme</title>
+      <link>/readme/</link>
+      <pubDate>Fri, 03 Nov 2023 15:31:42 -0400</pubDate>
+      
+      <guid>/readme/</guid>
+      <description>My name is Chance Jiajie Li (zh:李嘉杰), and I go by Chance. I am currently an graduate student at the City Science (formerly Changing Places) group at the MIT Media Lab. As a developer and researcher, my overarching goal is to enhance urban systems from a media technological perspective.
+Email: jiajie@mit.edu
+Github: github.com/LeeJAJA
+LinkedIn: linkedin.com/in/chanceli
+Please feel free to send me an email if you are interested in collaborating or simply having a chat about science!</description>
+    </item>
+    
+  </channel>
+</rss>
