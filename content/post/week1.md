@@ -8,6 +8,6 @@ Test
 
 
 
+<img src="/assets/readme/avatar.jpg" alt="avatar" style="zoom:50%;" />
 
 
-![avatar](./assets/avatar.jpg)
