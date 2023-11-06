@@ -1,2 +1,2 @@
-relativeURLs = true
+relativeURLs = false
 theme = 'github-style'

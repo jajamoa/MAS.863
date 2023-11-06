@@ -6,8 +6,5 @@ draft: false
 
 Test
 
-
-
-<img src="/assets/readme/avatar.jpg" alt="avatar" style="zoom:50%;" />
-
+<img src="../assets/week1/avatar.jpg" alt="avatar" style="zoom:50%;" />
 
