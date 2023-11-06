@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Chance&#39;s Sketchpad</title>
-    <link>/post/</link>
+    <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/</link>
     <description>Recent content in Posts on Chance&#39;s Sketchpad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Nov 2023 15:32:11 -0400</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Nov 2023 15:32:11 -0400</lastBuildDate><atom:link href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Week1</title>
-      <link>/post/week1/</link>
+      <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week1/</link>
       <pubDate>Fri, 03 Nov 2023 15:32:11 -0400</pubDate>
       
-      <guid>/post/week1/</guid>
+      <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week1/</guid>
       <description>Test</description>
     </item>
     

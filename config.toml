@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/"
 languageCode = "en-us"
 title = "Chance's Sketchpad"
 theme = "github-style"
@@ -24,11 +24,11 @@ locationURL = "https://fab.cba.mit.edu/classes/863.23/"
 enableGitalk = true
 
 [params.gitalk]
-clientID = "Your client ID"
-clientSecret = "Your client secret"
-repo = "repo"
-owner = "MeiK2333"
-admin = "MeiK2333"
+clientID = "c439c2f976c9d95c4f30"
+clientSecret = "9775261fe1d02bbc5ed8dc618b58b90ea4a9f4c3"
+repo = "MAS.863"
+owner = "LeeJAJA"
+admin = "LeeJAJA"
 id = "location.pathname"
 labels = "gitalk"
 perPage = 15
