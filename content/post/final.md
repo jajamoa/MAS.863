@@ -19,7 +19,7 @@ I am currently planning to develop a modular paper airplane folding machine. I f
 
 ### Primary Paper Folds
 
-<img src="../assets/final/folds.png" alt="avatar" style="width: 100%;" />
+<img src="../assets/final/folds.png" alt="avatar" width="100%" />
 
 ### Z-Fold Machine
 
