@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/light.css' />
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/dark.css' />
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/syntax.css' />
-    <title>Week1 - Chance&#39;s Sketchpad</title>
+    <title>Week1 - computer-aided design - Chance&#39;s Sketchpad</title>
     
     <link rel="icon" type="image/x-icon" href='/images/favicon.ico'>
     
@@ -18,7 +18,7 @@
 
     
     <meta name="description"
-  content="Test" />
+  content="computer-aided design, model (raster, vector, 2D, 3D, render, animate, simulate, &amp;hellip;) a possible final project" />
 <meta name="keywords"
   content='MIT, MAS.863, How To Make (almost) Anything 2023' />
 <meta name="robots" content="noodp" />
@@ -26,9 +26,9 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Week1 - Chance&#39;s Sketchpad" />
+<meta name="twitter:title" content="Week1 - computer-aided design - Chance&#39;s Sketchpad" />
 <meta name="twitter:description"
-  content="Test" />
+  content="computer-aided design, model (raster, vector, 2D, 3D, render, animate, simulate, &amp;hellip;) a possible final project" />
 <meta name="twitter:site" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -36,11 +36,11 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Week1 - Chance&#39;s Sketchpad">
+<meta property="og:title" content="Week1 - computer-aided design - Chance&#39;s Sketchpad">
 <meta property="og:description"
-  content="Test" />
+  content="computer-aided design, model (raster, vector, 2D, 3D, render, animate, simulate, &amp;hellip;) a possible final project" />
 <meta property="og:url" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week1/" />
-<meta property="og:site_name" content="Week1" />
+<meta property="og:site_name" content="Week1 - computer-aided design" />
 <meta property="og:image"
   content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
 <meta property="og:image:width" content="2048">
@@ -141,7 +141,7 @@
                   <span class="author">
                     <a href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">Chance Jiajie Li</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week1/">Week1</a></strong>
+                      href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week1/">Week1 - computer-aided design</a></strong>
                 </h1>
                 <div class="note m-0">
                   Created <relative-time datetime="Wed, 13 Sep 2023 15:32:11 -0400"
@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 08 Nov 2023 10:44:36 -0500"
+                  Modified <relative-time datetime="Wed, 08 Nov 2023 13:57:02 -0500"
                     class="no-wrap">
-                    Wed, 08 Nov 2023 10:44:36 -0500</relative-time>
+                    Wed, 08 Nov 2023 13:57:02 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      1 Words
+                      290 Words
                     
 
                   </div>
@@ -194,8 +194,72 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><p>Test</p>
-<p><img src="../assets/week1/avatar.jpg" alt="avatar" style="zoom:50%;" /></p>
+                <article class="markdown-body entry-content container-lg"><h2 id="week1---computer-aided-design">Week1 - computer-aided design</h2>
+<h3 id="assignment">Assignment</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> model (raster, vector, 2D, 3D, render, animate, simulate, &hellip;) a possible final project, </br></li>
+<li><input checked="" disabled="" type="checkbox"> compress your images and videos, </br></li>
+<li><input checked="" disabled="" type="checkbox"> and post a description with your design files on your class page </br></li>
+</ul>
+<h3 id="image-video-compression">Image, Video Compression</h3>
+<div class="highlight"><pre class="chroma"><code class="language-bat" data-lang="bat"><span class="p">@</span><span class="k">echo</span> off
+<span class="k">setlocal</span> enabledelayedexpansion
+
+<span class="p">:</span><span class="c1">: Set the path to the directory containing the folders</span>
+<span class="k">set</span> <span class="s2">&#34;root_path=path\to\your\folder&#34;</span>
+
+<span class="p">:</span><span class="c1">: Set the size threshold in bytes (e.g., 20000000 for 20MB for videos and 3000000 for 3MB for images)</span>
+<span class="k">set</span> <span class="s2">&#34;size_threshold_video=20000000&#34;</span>
+<span class="k">set</span> <span class="s2">&#34;size_threshold_image=3000000&#34;</span>
+
+
+<span class="p">:</span><span class="c1">: Loop over all video and image files in the root directory and all subdirectories</span>
+<span class="k">for</span> /r <span class="s2">&#34;</span><span class="nv">%root_path%</span><span class="s2">&#34;</span> <span class="se">%%</span>F <span class="k">in</span> <span class="p">(</span>*.mp4, *.mkv, *.avi, *.jpg, *.png, *.bmp<span class="p">)</span> <span class="k">do</span> <span class="p">(</span>
+    <span class="k">set</span> <span class="s2">&#34;file_size=</span><span class="se">%%</span><span class="s2">~zF&#34;</span>
+
+<span class="p">:</span><span class="c1">: Check if the file is a video and if it exceeds the size threshold for videos</span>
+<span class="k">if</span> <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~xF&#34;</span><span class="o">==</span><span class="s2">&#34;.mp4&#34;</span> <span class="k">if</span> <span class="nv">!file_size!</span> <span class="ow">gtr</span> <span class="nv">!size_threshold_video!</span> <span class="p">(</span>
+    <span class="k">echo</span> Compressing video: <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span>
+    ffmpeg -i <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span> -vcodec h264 -acodec aac -crf 23 -preset slower <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~dpF</span><span class="se">%%</span><span class="s2">~nF_compressed</span><span class="se">%%</span><span class="s2">~xF&#34;</span>
+<span class="p">)</span> <span class="k">else</span> <span class="k">if</span> <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~xF&#34;</span><span class="o">==</span><span class="s2">&#34;.mkv&#34;</span> <span class="k">if</span> <span class="nv">!file_size!</span> <span class="ow">gtr</span> <span class="nv">!size_threshold_video!</span> <span class="p">(</span>
+    <span class="k">echo</span> Compressing video: <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span>
+    ffmpeg -i <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span> -vcodec h264 -acodec aac -crf 23 -preset slower <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~dpF</span><span class="se">%%</span><span class="s2">~nF_compressed</span><span class="se">%%</span><span class="s2">~xF&#34;</span>
+<span class="p">)</span> <span class="k">else</span> <span class="k">if</span> <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~xF&#34;</span><span class="o">==</span><span class="s2">&#34;.avi&#34;</span> <span class="k">if</span> <span class="nv">!file_size!</span> <span class="ow">gtr</span> <span class="nv">!size_threshold_video!</span> <span class="p">(</span>
+    <span class="k">echo</span> Compressing video: <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span>
+    ffmpeg -i <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span> -vcodec h264 -acodec aac -crf 23 -preset slower <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~dpF</span><span class="se">%%</span><span class="s2">~nF_compressed</span><span class="se">%%</span><span class="s2">~xF&#34;</span>
+<span class="p">)</span>
+
+<span class="p">:</span><span class="c1">: Check if the file is an image and if it exceeds the size threshold for images</span>
+<span class="k">if</span> <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~xF&#34;</span><span class="o">==</span><span class="s2">&#34;.jpg&#34;</span> <span class="k">if</span> <span class="nv">!file_size!</span> <span class="ow">gtr</span> <span class="nv">!size_threshold_image!</span> <span class="p">(</span>
+    <span class="k">echo</span> Compressing image: <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span>
+    ffmpeg -i <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span> -vf <span class="s2">&#34;scale=iw/2:ih/2&#34;</span> -compression_level 5 <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~dpF</span><span class="se">%%</span><span class="s2">~nF_compressed</span><span class="se">%%</span><span class="s2">~xF&#34;</span>
+<span class="p">)</span> <span class="k">else</span> <span class="k">if</span> <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~xF&#34;</span><span class="o">==</span><span class="s2">&#34;.png&#34;</span> <span class="k">if</span> <span class="nv">!file_size!</span> <span class="ow">gtr</span> <span class="nv">!size_threshold_image!</span> <span class="p">(</span>
+    <span class="k">echo</span> Compressing image: <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span>
+    ffmpeg -i <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span> -vf <span class="s2">&#34;scale=iw/2:ih/2&#34;</span> -compression_level 5 <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~dpF</span><span class="se">%%</span><span class="s2">~nF_compressed</span><span class="se">%%</span><span class="s2">~xF&#34;</span>
+<span class="p">)</span> <span class="k">else</span> <span class="k">if</span> <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~xF&#34;</span><span class="o">==</span><span class="s2">&#34;.bmp&#34;</span> <span class="k">if</span> <span class="nv">!file_size!</span> <span class="ow">gtr</span> <span class="nv">!size_threshold_image!</span> <span class="p">(</span>
+    <span class="k">echo</span> Compressing image: <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span>
+    ffmpeg -i <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">F&#34;</span> -vf <span class="s2">&#34;scale=iw/2:ih/2&#34;</span> -compression_level 5 <span class="s2">&#34;</span><span class="se">%%</span><span class="s2">~dpF</span><span class="se">%%</span><span class="s2">~nF_compressed</span><span class="se">%%</span><span class="s2">~xF&#34;</span>
+<span class="p">)</span>
+<span class="p">)</span>
+
+
+<span class="k">echo</span> No more files to compress.
+<span class="k">pause</span>
+
+</code></pre></div><h3 id="basic-block-design">Basic Block Design</h3>
+<p><img src="../assets/week1/final.jpg" style="zoom:50%;" /></p>
+<h3 id="cad-process">CAD Process</h3>
+<p><img src="../assets/week1/1.jpg" style="zoom:50%;" />
+<img src="../assets/week1/2.jpg" style="zoom:50%;" />
+<img src="../assets/week1/3.jpg" style="zoom:50%;" />
+<img src="../assets/week1/4.jpg" style="zoom:50%;" />
+<img src="../assets/week1/5.jpg" style="zoom:50%;" />
+<img src="../assets/week1/6.jpg" style="zoom:50%;" />
+<img src="../assets/week1/7.jpg" style="zoom:50%;" />
+<img src="../assets/week1/8.jpg" style="zoom:50%;" />
+<img src="../assets/week1/9.jpg" style="zoom:50%;" />
+<img src="../assets/week1/10.jpg" style="zoom:50%;" />
+<img src="../assets/week1/11.jpg" style="zoom:50%;" /></p>
 </article>
               </div>
             </div>

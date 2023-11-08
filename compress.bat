@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 :: Set the path to the directory containing the folders
 set "root_path=C:\Users\jajam\CJJL\MIT\HTMAA\MAS.863\content\post\assets\week9"
 
-:: Set the size threshold in bytes (e.g., 50000000 for 50MB for videos and 5000000 for 5MB for images)
+:: Set the size threshold in bytes (e.g., 20000000 for 20MB for videos and 3000000 for 3MB for images)
 set "size_threshold_video=20000000"
 set "size_threshold_image=3000000"
 

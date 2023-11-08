@@ -6,6 +6,8 @@ pin: true
 summary: "Final project, plan to do a paper folding machine, which may be able to fold (almost) anything."
 ---
 
+## Final Project - paper folding machine
+
 ## Project Idea
 
 I am currently planning to develop a modular paper airplane folding machine. I find this project intriguing and drew inspiration from a LEGO creation. I am contemplating the possibility of creating a modularized, faster, and more flexible paper folding device. Through the combination of various modules, it can fold (almost) anything.
