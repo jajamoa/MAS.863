@@ -6,8 +6,15 @@
     <description>Recent content on Chance&#39;s Sketchpad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Nov 2023 10:44:03 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2023 10:44:03 -0500</lastBuildDate>
     <atom:link href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week11 - networking and communications</title>
+      <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week11/</link>
+      <pubDate>Thu, 16 Nov 2023 10:44:03 -0500</pubDate>
+      <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week11/</guid>
+      <description>design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface</description>
+    </item>
     <item>
       <title>Week10 - output devices</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week10/</link>
