@@ -6,21 +6,26 @@
     <description>Recent content on Chance&#39;s Sketchpad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Nov 2023 10:44:03 -0500</lastBuildDate><atom:link href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Nov 2023 10:44:03 -0500</lastBuildDate>
+    <atom:link href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week10 - output devices</title>
+      <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week10/</link>
+      <pubDate>Wed, 15 Nov 2023 10:44:03 -0500</pubDate>
+      <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week10/</guid>
+      <description>output devices, add an output device to a microcontroller board you&amp;rsquo;ve designed, and program it to do something</description>
+    </item>
     <item>
       <title>Week9 - input devices</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week9/</link>
       <pubDate>Wed, 08 Nov 2023 10:44:03 -0500</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week9/</guid>
       <description>input devices, measure something: add a sensor to a microcontroller board that you have designed and read it</description>
     </item>
-    
     <item>
       <title>Readme</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/readme/</link>
       <pubDate>Fri, 03 Nov 2023 15:31:42 -0400</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/readme/</guid>
       <description>My name is Chance Jiajie Li. I am currently an graduate student at the City Science (formerly Changing Places) group at the MIT Media Lab. As a developer and researcher, my overarching goal is to enhance urban systems from a media technological perspective.
 Email: jiajie@mit.edu
@@ -28,87 +33,68 @@ Github: github.com/LeeJAJA
 LinkedIn: linkedin.com/in/chanceli
 Please feel free to send me an email if you are interested in collaborating or simply having a chat about science!</description>
     </item>
-    
     <item>
       <title>Week8 - computer-controlled machining</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week8/</link>
       <pubDate>Wed, 01 Nov 2023 10:42:16 -0500</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week8/</guid>
       <description>input devices, measure something: add a sensor to a microcontroller board that you have designed and read it</description>
     </item>
-    
     <item>
       <title>Week7 - molding and casting</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week7/</link>
       <pubDate>Wed, 25 Oct 2023 10:42:14 -0500</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week7/</guid>
       <description>input devices, measure something: add a sensor to a microcontroller board that you have designed and read it</description>
     </item>
-    
     <item>
       <title>Week6 - electronics production</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week6/</link>
       <pubDate>Wed, 18 Oct 2023 10:42:12 -0500</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week6/</guid>
       <description>electronics production, make and test the development board that you designed to interact and communicate with an embedded microcontroller</description>
     </item>
-    
     <item>
       <title>Week5 - electronics design</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week5/</link>
       <pubDate>Wed, 11 Oct 2023 10:42:10 -0500</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week5/</guid>
       <description>electronics design, use an EDA tool to design a development board to interact and communicate with an embedded microcontroller</description>
     </item>
-    
     <item>
       <title>Week4 - 3D scanning and printing</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week4/</link>
       <pubDate>Wed, 04 Oct 2023 10:42:06 -0500</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week4/</guid>
       <description>3D scanning and printing, design and 3D print an object (small, few cm3, limited by printer time) that could not be made subtractively</description>
     </item>
-    
     <item>
       <title>Week3 - embedded programming</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week3/</link>
       <pubDate>Wed, 27 Sep 2023 10:42:04 -0500</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week3/</guid>
       <description>write program for a microcontroller development board to interact (with local input &amp;amp;/or output devices)</description>
     </item>
-    
     <item>
       <title>Week2 - computer-controlled cutting</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week2/</link>
       <pubDate>Wed, 20 Sep 2023 10:42:01 -0500</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week2/</guid>
       <description>computer-controlled cutting, model (raster, vector, 2D, 3D, render, animate, simulate, &amp;hellip;) a possible final project</description>
     </item>
-    
     <item>
       <title>Week1 - computer-aided design</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week1/</link>
       <pubDate>Wed, 13 Sep 2023 15:32:11 -0400</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week1/</guid>
       <description>computer-aided design, model (raster, vector, 2D, 3D, render, animate, simulate, &amp;hellip;) a possible final project</description>
     </item>
-    
     <item>
       <title>Final Project - paper folding machine</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/final/</link>
       <pubDate>Tue, 12 Sep 2023 15:32:11 -0400</pubDate>
-      
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/final/</guid>
       <description>Final project, plan to do a paper folding machine, which may be able to fold (almost) anything.</description>
     </item>
-    
   </channel>
 </rss>

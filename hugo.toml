@@ -1,2 +1,45 @@
-relativeURLs = false
-theme = 'github-style'
+# relativeURLs = false
+baseURL = "https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/"
+languageCode = "en-us"
+title = "Chance's Sketchpad"
+theme = "github-style"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+author = "Chance Jiajie Li"
+description = "Graduate Student @mitmedialab | prev @MicrosoftResearch @civic-data-design-lab"
+company = "Massachusetts Institute of Technology"
+CompanyURL = "https://mit.edu/"
+github = "LeeJAJA"
+linkedin = "chanceli"
+email = "jiajie@mit.edu"
+url = "https://jiajie.media/"
+keywords = "MIT, MAS.863, How To Make (almost) Anything 2023"
+rss = true
+lastmod = true
+userStatusEmoji = "😀"
+favicon = "/images/favicon.ico"
+location = "Neil's Class"
+locationURL = "https://fab.cba.mit.edu/classes/863.23/"
+enableGitalk = true
+
+[params.gitalk]
+clientID = "c439c2f976c9d95c4f30"
+clientSecret = "9775261fe1d02bbc5ed8dc618b58b90ea4a9f4c3"
+repo = "MAS.863"
+owner = "LeeJAJA"
+admin = "LeeJAJA"
+id = "location.pathname"
+labels = "gitalk"
+perPage = 15
+pagerDirection = "last"
+createIssueManually = true
+distractionFreeMode = false
+
+
+[frontmatter]
+lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[markup.goldmark.renderer]
+unsafe = true

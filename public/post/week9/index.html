@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 08 Nov 2023 13:28:09 -0500"
+                  Modified <relative-time datetime="Wed, 15 Nov 2023 13:33:38 -0500"
                     class="no-wrap">
-                    Wed, 08 Nov 2023 13:28:09 -0500</relative-time>
+                    Wed, 15 Nov 2023 13:33:38 -0500</relative-time>
                   
                 </div>
               </div>
@@ -207,56 +207,55 @@
 <h3 id="idea">Idea</h3>
 <p>Following the idea of the origami/paper folding machine to conceptualize this week&rsquo;s assignment, in fact, the requirements of final project&rsquo;s input part are not a lot, probably only a need to sense the position of the paper..</p>
 <p>Special thanks to Jake for his help, he gave me good and concise advice on how to use photodio and LEDs to build a basic paper sensing circuit.</p>
-<p><img src="../assets/week9/draft.jpg" style="zoom:50%;" /></p>
+<img src="../assets/week9/draft.jpg" style="zoom:50%;" />
 <h3 id="electronics-design">Electronics Design</h3>
-<p><img src="../assets/week9/sche.jpg" style="zoom:50%;" />
-<img src="../assets/week9/pcb.jpg" style="zoom:50%;" /></p>
+<img src="../assets/week9/sche.jpg" style="zoom:50%;" />
+<img src="../assets/week9/pcb.jpg" style="zoom:50%;" />
 <h4 id="issue---text-in-top-layer">Issue - text in top layer</h4>
-<p><img src="../assets/week9/issue1.jpg" style="zoom:50%;" />
-<img src="../assets/week9/issue2.jpg" style="zoom:50%;" /></p>
+<img src="../assets/week9/issue1.jpg" style="zoom:50%;" />
+<img src="../assets/week9/issue2.jpg" style="zoom:50%;" />
 <h4 id="fix---microsoft-paint">Fix - microsoft paint</h4>
-<p><img src="../assets/week9/fix_1.jpg" style="zoom:50%;" />
-<img src="../assets/week9/fix_2.jpg" style="zoom:50%;" /></p>
+<img src="../assets/week9/fix_1.jpg" style="zoom:50%;" />
+<img src="../assets/week9/fix_2.jpg" style="zoom:50%;" />
 <h3 id="electronics-production">Electronics Production</h3>
 <h4 id="export">Export</h4>
-<p><img src="../assets/week9/0.jpg" style="zoom:50%;" />
+<img src="../assets/week9/0.jpg" style="zoom:50%;" />
 <img src="../assets/week9/input_cut.jpg" style="zoom:50%;" />
 <img src="../assets/week9/input_trace.jpg" style="zoom:50%;" />
 <img src="../assets/week9/1.png" style="zoom:50%;" />
 <img src="../assets/week9/2.png" style="zoom:50%;" />
 <img src="../assets/week9/3.png" style="zoom:50%;" />
-<img src="../assets/week9/4.png" style="zoom:50%;" /></p>
+<img src="../assets/week9/4.png" style="zoom:50%;" />
 <h4 id="milling">Milling</h4>
-<p><img src="../assets/week9/mill1.jpg" style="zoom:50%;" />
+<img src="../assets/week9/mill1.jpg" style="zoom:50%;" />
 <img src="../assets/week9/mill2.jpg" style="zoom:50%;" />
 <img src="../assets/week9/mill3.jpg" style="zoom:50%;" />
 <img src="../assets/week9/mill4.jpg" style="zoom:50%;" />
 <img src="../assets/week9/mill5.jpg" style="zoom:50%;" />
-<img src="../assets/week9/mill6.jpg" style="zoom:50%;" /></p>
+<img src="../assets/week9/mill6.jpg" style="zoom:50%;" />
 <video  style="width: 100%;" controls>
 <source src="../assets/week9/mill2.mp4"  type="video/mp4">
 </video>
 <h4 id="soldering">Soldering</h4>
-<p><img src="../assets/week9/solder1.jpg" style="zoom:50%;" /></p>
+<img src="../assets/week9/solder1.jpg" style="zoom:50%;" />
 <h3 id="embedded-programming">Embedded Programming</h3>
-<p><img src="../assets/week9/solder2.jpg" style="zoom:50%;" /></p>
+<img src="../assets/week9/solder2.jpg" style="zoom:50%;" />
 <h4 id="code">Code</h4>
-<div class="highlight"><pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">pin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>  
-<span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
-
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">pinMode</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span> 
-  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span> 
-<span class="p">}</span>
-
-<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">value</span> <span class="o">=</span> <span class="n">digitalRead</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span> 
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span> 
-  <span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-<span class="p">}</span>
-
-</code></pre></div><h4 id="tesing">Tesing</h4>
-<p><img src="../assets/week9/test.jpg" style="zoom:50%;" /></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">pin</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>  
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">pinMode</span><span class="p">(</span><span class="n">pin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">value</span> <span class="o">=</span> <span class="nf">digitalRead</span><span class="p">(</span><span class="n">pin</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">value</span><span class="p">);</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h4 id="tesing">Tesing</h4>
+<img src="../assets/week9/test.jpg" style="zoom:50%;" />
 </article>
               </div>
             </div>

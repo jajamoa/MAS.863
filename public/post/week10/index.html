@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/light.css' />
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/dark.css' />
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/syntax.css' />
-    <title>Week5 - electronics design - Chance&#39;s Sketchpad</title>
+    <title>Week10 - output devices - Chance&#39;s Sketchpad</title>
     
     <link rel="icon" type="image/x-icon" href='/images/favicon.ico'>
     
@@ -18,17 +18,17 @@
 
     
     <meta name="description"
-  content="electronics design, use an EDA tool to design a development board to interact and communicate with an embedded microcontroller" />
+  content="output devices, add an output device to a microcontroller board you&amp;rsquo;ve designed, and program it to do something" />
 <meta name="keywords"
   content='MIT, MAS.863, How To Make (almost) Anything 2023' />
 <meta name="robots" content="noodp" />
-<link rel="canonical" href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week5/" />
+<link rel="canonical" href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week10/" />
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Week5 - electronics design - Chance&#39;s Sketchpad" />
+<meta name="twitter:title" content="Week10 - output devices - Chance&#39;s Sketchpad" />
 <meta name="twitter:description"
-  content="electronics design, use an EDA tool to design a development board to interact and communicate with an embedded microcontroller" />
+  content="output devices, add an output device to a microcontroller board you&amp;rsquo;ve designed, and program it to do something" />
 <meta name="twitter:site" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/" />
 <meta name="twitter:creator" content="" />
 <meta name="twitter:image"
@@ -36,17 +36,17 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Week5 - electronics design - Chance&#39;s Sketchpad">
+<meta property="og:title" content="Week10 - output devices - Chance&#39;s Sketchpad">
 <meta property="og:description"
-  content="electronics design, use an EDA tool to design a development board to interact and communicate with an embedded microcontroller" />
-<meta property="og:url" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week5/" />
-<meta property="og:site_name" content="Week5 - electronics design" />
+  content="output devices, add an output device to a microcontroller board you&amp;rsquo;ve designed, and program it to do something" />
+<meta property="og:url" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week10/" />
+<meta property="og:site_name" content="Week10 - output devices" />
 <meta property="og:image"
   content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2023-10-11 10:42:10 -0500 -0500" />
+<meta property="article:published_time" content="2023-11-15 10:44:03 -0500 EST" />
 
 
 
@@ -141,18 +141,18 @@
                   <span class="author">
                     <a href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">Chance Jiajie Li</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week5/">Week5 - electronics design</a></strong>
+                      href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week10/">Week10 - output devices</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Wed, 11 Oct 2023 10:42:10 -0500"
+                  Created <relative-time datetime="Wed, 15 Nov 2023 10:44:03 -0500"
                     class="no-wrap">
-                    Wed, 11 Oct 2023 10:42:10 -0500</relative-time>
+                    Wed, 15 Nov 2023 10:44:03 -0500</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 15 Nov 2023 13:33:38 -0500"
+                  Modified <relative-time datetime="Thu, 16 Nov 2023 19:28:50 -0500"
                     class="no-wrap">
-                    Wed, 15 Nov 2023 13:33:38 -0500</relative-time>
+                    Thu, 16 Nov 2023 19:28:50 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      60 Words
+                      366 Words
                     
 
                   </div>
@@ -194,19 +194,83 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><h2 id="week5---electronics-design">Week5 - electronics design</h2>
+                <article class="markdown-body entry-content container-lg"><h2 id="week10---output-devices">Week10 - output devices</h2>
 <h3 id="assignment">Assignment</h3>
 <p>individual assignment:</br></p>
 <ul>
-<li><input checked="" disabled="" type="checkbox"> use an EDA tool to design a development board to interact and communicate with an embedded microcontroller</li>
-<li><input checked="" disabled="" type="checkbox"> extra credit: try another design workflow</li>
-<li><input disabled="" type="checkbox"> extra credit: design a case for it</li>
-<li><input disabled="" type="checkbox"> extra credit: simulate its operation</li>
+<li><input checked="" disabled="" type="checkbox"> add an output device to a microcontroller board you&rsquo;ve designed, and program it to do something</li>
 </ul>
 <p>group assignment:</br></p>
 <ul>
-<li><input disabled="" type="checkbox"> use the test equipment in your lab to observe the operation of a microcontroller circuit board</li>
+<li><input disabled="" type="checkbox"> measure the power consumption of an output device</li>
 </ul>
+<h3 id="idea">Idea</h3>
+<p>Following the idea of the origami/paper folding machine to conceptualize this week&rsquo;s assignment, I am trying to build a key compnent of it &ndash; paper plane launcher.</p>
+<video  style="width: 100%;" controls>
+<source src="../assets/week10/idea.mp4"  type="video/mp4">
+</video>
+<h3 id="testing-with-breadboard">Testing with Breadboard</h3>
+<h4 id="dc-motor">DC Motor</h4>
+<p>Feel hard to test H bridge on breadboard,  TB67H451AFNG is a soic8 chip..</p>
+<img src="../assets/week10/soic8.jpg" style="width:100%" />
+<img src="../assets/week10/dc_1.png" style="zoom:50%;" />
+<img src="../assets/week10/dc_2.png" style="zoom:50%;" />
+<h4 id="servo-motor">Servo Motor</h4>
+<p>I am using <a href="https://www.arduino.cc/reference/en/libraries/esp32servo/">esp32servo.h</a> to control servo motor with XIAO ESP32 C3</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;ESP32Servo.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="n">Servo</span> <span class="n">myservo</span><span class="p">;</span>  <span class="c1">// create servo object to control a servo
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 16 servo objects can be created on the ESP32
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>    <span class="c1">// variable to store the servo position
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span> <span class="n">servoPin</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Allow allocation of all timers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">ESP32PWM</span><span class="o">::</span><span class="nf">allocateTimer</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ESP32PWM</span><span class="o">::</span><span class="nf">allocateTimer</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ESP32PWM</span><span class="o">::</span><span class="nf">allocateTimer</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">ESP32PWM</span><span class="o">::</span><span class="nf">allocateTimer</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="n">myservo</span><span class="p">.</span><span class="nf">setPeriodHertz</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span>    <span class="c1">// standard 50 hz servo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="n">myservo</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="n">servoPin</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">2500</span><span class="p">);</span> <span class="c1">// attaches the servo on pin 18 to the servo object
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// using default min/max of 1000us and 2000us
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// different servos may require different min/max settings
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// for an accurate 0 to 180 sweep
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="mi">180</span><span class="p">;</span> <span class="n">pos</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// goes from 0 degrees to 180 degrees
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// in steps of 1 degree
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">myservo</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>    <span class="c1">// tell servo to go to position in variable &#39;pos&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">delay</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>             <span class="c1">// waits 15ms for the servo to reach the position
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="n">pos</span> <span class="o">=</span> <span class="mi">180</span><span class="p">;</span> <span class="n">pos</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">pos</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// goes from 180 degrees to 0 degrees
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="n">myservo</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">pos</span><span class="p">);</span>    <span class="c1">// tell servo to go to position in variable &#39;pos&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">delay</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>             <span class="c1">// waits 15ms for the servo to reach the position
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>With reference to the data <a href="https://www.adafruit.com/product/2201">here</a>, the default servo pulse width of the SG51R (typically 1ms to 2ms) may not provide a full 180 degrees of motion. In this case, check if you can set the servo controller to a custom pulse length and try 0.75ms to 2.25ms, I tried and did not get to 180 degrees, adjusting to 0.5ms to 2.5ms works fine.</p>
+<h5 id="servo-pulse-width-from-075ms-to-225ms">servo pulse width from 0.75ms to 2.25ms</h5>
+<video  style="width: 100%;" controls>
+<source src="../assets/week10/servo2.mp4"  type="video/mp4">
+</video>
+<h5 id="servo-pulse-width-from-05ms-to-25ms">servo pulse width from 0.5ms to 2.5ms</h5>
+<video  style="width: 100%;" controls>
+<source src="../assets/week10/servo1.mp4"  type="video/mp4">
+</video>
+<h3 id="electronics-design">Electronics Design</h3>
+<img src="../assets/week10/eda_1.png" style="zoom:50%;" />
+<img src="../assets/week10/eda_2.png" style="zoom:50%;" />
+<h3 id="electronics-production">Electronics Production</h3>
+<h4 id="export">Export</h4>
+<img src="../assets/week10/ep_2.png" style="zoom:50%;" />
+<img src="../assets/week10/ep_1.png" style="zoom:50%;" />
+<h4 id="milling">Milling</h4>
+<video  style="width: 100%;" controls>
+<source src="../assets/week10/ep_3.mp4"  type="video/mp4">
+</video>
+<img src="../assets/week10/ep_4.jpg" style="zoom:50%;" />
 </article>
               </div>
             </div>
