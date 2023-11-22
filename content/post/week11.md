@@ -20,3 +20,6 @@ group assignment:</br>
 
 ### Idea
 
+1.  mqtt data receiver
+2.  spatial relationship detection between modular components
+

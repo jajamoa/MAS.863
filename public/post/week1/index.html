@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 15 Nov 2023 13:33:38 -0500"
+                  Modified <relative-time datetime="Wed, 22 Nov 2023 05:32:15 -0500"
                     class="no-wrap">
-                    Wed, 15 Nov 2023 13:33:38 -0500</relative-time>
+                    Wed, 22 Nov 2023 05:32:15 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      290 Words
+                      542 Words
                     
 
                   </div>
@@ -202,6 +202,7 @@
 <li><input checked="" disabled="" type="checkbox"> and post a description with your design files on your class page </br></li>
 </ul>
 <h3 id="image-video-compression">Image, Video Compression</h3>
+<h4 id="windows-version">Windows Version</h4>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bat" data-lang="bat"><span class="line"><span class="cl"><span class="p">@</span><span class="k">echo</span> off
 </span></span><span class="line"><span class="cl"><span class="k">setlocal</span> enabledelayedexpansion
 </span></span><span class="line"><span class="cl">
@@ -245,7 +246,50 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">echo</span> No more files to compress.
 </span></span><span class="line"><span class="cl"><span class="k">pause</span>
-</span></span></code></pre></div><h3 id="basic-block-design">Basic Block Design</h3>
+</span></span></code></pre></div><h4 id="macos--linux">MacOS / Linux</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Set the path to the directory containing the folders</span>
+</span></span><span class="line"><span class="cl"><span class="nv">root_path</span><span class="o">=</span><span class="s2">&#34;./content/post/assets&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Set the size threshold in bytes</span>
+</span></span><span class="line"><span class="cl"><span class="nv">size_threshold_video</span><span class="o">=</span><span class="m">10000000</span>
+</span></span><span class="line"><span class="cl"><span class="nv">size_threshold_image</span><span class="o">=</span><span class="m">1000000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a temporary file to store the list of files</span>
+</span></span><span class="line"><span class="cl"><span class="nv">temp_file_list</span><span class="o">=</span><span class="k">$(</span>mktemp<span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Collect all video and image files in the root directory and all subdirectories</span>
+</span></span><span class="line"><span class="cl">find <span class="s2">&#34;</span><span class="nv">$root_path</span><span class="s2">&#34;</span> -type f <span class="se">\(</span> -name <span class="s2">&#34;*.mp4&#34;</span> -o -name <span class="s2">&#34;*.mkv&#34;</span> -o -name <span class="s2">&#34;*.avi&#34;</span> -o -name <span class="s2">&#34;*.jpg&#34;</span> -o -name <span class="s2">&#34;*.png&#34;</span> -o -name <span class="s2">&#34;*.bmp&#34;</span> <span class="se">\)</span> &gt; <span class="s2">&#34;</span><span class="nv">$temp_file_list</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Loop over the collected file names</span>
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="nv">IFS</span><span class="o">=</span> <span class="nb">read</span> -r file<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> -f <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">file_size</span><span class="o">=</span><span class="k">$(</span>stat -f%z <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">        <span class="c1"># Check if the file is a video and if it exceeds the size threshold for videos</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">{</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">file</span><span class="p">: -4</span><span class="si">}</span> <span class="o">==</span> <span class="s2">&#34;.mp4&#34;</span> <span class="o">]]</span> <span class="o">||</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">file</span><span class="p">: -4</span><span class="si">}</span> <span class="o">==</span> <span class="s2">&#34;.mkv&#34;</span> <span class="o">]]</span> <span class="o">||</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">file</span><span class="p">: -4</span><span class="si">}</span> <span class="o">==</span> <span class="s2">&#34;.avi&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="o">}</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> <span class="nv">$file_size</span> -gt <span class="nv">$size_threshold_video</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">echo</span> <span class="s2">&#34;Compressing video: </span><span class="nv">$file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">            ffmpeg -loglevel error -y -i <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> -vcodec h264 -acodec aac -crf <span class="m">23</span> -preset slower <span class="s2">&#34;</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span><span class="s2">_compressed.</span><span class="si">${</span><span class="nv">file</span><span class="p">##*.</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># Check if the file is an image and if it exceeds the size threshold for images</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">{</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">file</span><span class="p">: -4</span><span class="si">}</span> <span class="o">==</span> <span class="s2">&#34;.jpg&#34;</span> <span class="o">]]</span> <span class="o">||</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">file</span><span class="p">: -4</span><span class="si">}</span> <span class="o">==</span> <span class="s2">&#34;.png&#34;</span> <span class="o">]]</span> <span class="o">||</span> <span class="o">[[</span> <span class="si">${</span><span class="nv">file</span><span class="p">: -4</span><span class="si">}</span> <span class="o">==</span> <span class="s2">&#34;.bmp&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="o">}</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> <span class="nv">$file_size</span> -gt <span class="nv">$size_threshold_image</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">echo</span> <span class="s2">&#34;Compressing image: </span><span class="nv">$file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">            ffmpeg -loglevel error -y -i <span class="s2">&#34;</span><span class="nv">$file</span><span class="s2">&#34;</span> -vf <span class="s2">&#34;scale=iw/2:ih/2&#34;</span> -compression_level <span class="m">5</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">file</span><span class="p">%.*</span><span class="si">}</span><span class="s2">_compressed.</span><span class="si">${</span><span class="nv">file</span><span class="p">##*.</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo</span> <span class="s2">&#34;File not found: </span><span class="nv">$file</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span> &lt; <span class="s2">&#34;</span><span class="nv">$temp_file_list</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Remove the temporary file</span>
+</span></span><span class="line"><span class="cl">rm <span class="s2">&#34;</span><span class="nv">$temp_file_list</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;No more files to compress.&#34;</span>
+</span></span></code></pre></div><img src="../assets/week1/00.png" style="zoom:50%;" />
+<img src="../assets/week1/0.png" style="zoom:50%;" />
+<h3 id="basic-block-design">Basic Block Design</h3>
 <img src="../assets/week1/final.jpg" style="zoom:50%;" />
 <h3 id="cad-process">CAD Process</h3>
 <img src="../assets/week1/1.jpg" style="zoom:50%;" />
