@@ -19,3 +19,13 @@ individual assignment:</br>
 group assignment:</br>
 
 - [ ] use the test equipment in your lab to observe the operation of a microcontroller circuit board
+
+<img src="../assets/week5/eagle1.jpg" style="zoom:50%;" />
+<img src="../assets/week5/eagle2.jpg" style="zoom:50%;" />
+<img src="../assets/week5/eagle3.jpg" style="zoom:50%;" />
+<img src="../assets/week5/eagle4.jpg" style="zoom:50%;" />
+<img src="../assets/week5/eagle5.svg" style="zoom:50%;" />
+
+<img src="../assets/week5/flux1.jpg" style="zoom:50%;" />
+<img src="../assets/week5/flux2.jpg" style="zoom:50%;" />
+<img src="../assets/week5/flux3.jpg" style="zoom:50%;" />

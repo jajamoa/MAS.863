@@ -16,3 +16,8 @@ individual assignment: </br>
 - [ ] cut something on the vinylcutter
 - [ ] design, lasercut, and document a parametric construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways,
 - [ ] and for extra credit include elements that aren't flat 
+
+<img src="../assets/week2/laser_1.png" style="zoom:50%;" />
+<img src="../assets/week2/laser_2.png" style="zoom:50%;" />
+<img src="../assets/week2/laser_3.png" style="zoom:50%;" />
+<img src="../assets/week2/laser_4.png" style="zoom:50%;" />

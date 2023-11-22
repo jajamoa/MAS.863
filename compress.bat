@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Set the path to the directory containing the folders
-set "root_path=C:\Users\jajam\CJJL\MIT\HTMAA\MAS.863\content\post\assets\week9"
+set "root_path=C:\Users\jajam\CJJL\MIT\HTMAA\MAS.863\content\post\assets\"
 
 :: Set the size threshold in bytes (e.g., 20000000 for 20MB for videos and 3000000 for 3MB for images)
 set "size_threshold_video=20000000"

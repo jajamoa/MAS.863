@@ -17,3 +17,12 @@ individual assignment:</br>
 group assignment:</br>
 
 - [ ] characterize the design rules for your in-house PCB production process send a PCB out to a board house
+
+<img src="../assets/week6/1.jpg" style="zoom:50%;" />
+<img src="../assets/week6/2.jpg" style="zoom:50%;" />
+<img src="../assets/week6/3.jpg" style="zoom:50%;" />
+<img src="../assets/week6/4.jpg" style="zoom:50%;" />
+<img src="../assets/week6/5.jpg" style="zoom:50%;" />
+<img src="../assets/week6/6.jpg" style="zoom:50%;" />
+<img src="../assets/week6/7.jpg" style="zoom:50%;" />
+<img src="../assets/week6/8.jpg" style="zoom:50%;" />

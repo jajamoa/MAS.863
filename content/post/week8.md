@@ -6,3 +6,6 @@ summary: "input devices, measure something: add a sensor to a microcontroller bo
 ---
 
 
+<img src="../assets/week8/1.png" style="zoom:50%;" />
+<img src="../assets/week8/2.png" style="zoom:50%;" />
+<img src="../assets/week8/3.png" style="zoom:50%;" />
