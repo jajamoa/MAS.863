@@ -29,8 +29,8 @@ while IFS= read -r file; do
             echo "Compressing image: $file"
             ffmpeg -loglevel error -y -i "$file" -vf "scale=iw/2:ih/2" -compression_level 5 "${file%.*}_compressed.${file##*.}"
         fi
-    # else
-    #     echo "File not found: $file"
+    else
+        echo "File not found: $file"
     fi
 done < "$temp_file_list"
 
