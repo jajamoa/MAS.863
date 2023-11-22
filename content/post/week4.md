@@ -46,8 +46,20 @@ Ready to give a thumbs-up to technology? I'm diving into 3D printing to recreate
 <img src="../assets/week4/16.png" style="width:90%;" />
 <img src="../assets/week4/17.png" style="width:90%;" />
 <img src="../assets/week4/18.png" style="width:90%;" />
+
 <img src="../assets/week4/19.png" style="width:90%;" />
 <img src="../assets/week4/20.png" style="width:90%;" />
+
+<img src="../assets/week4/26.jpg" style="width:90%;" />
+<img src="../assets/week4/27.jpg" style="width:90%;" />
+<img src="../assets/week4/24.jpg" style="width:90%;" />
+<img src="../assets/week4/25.jpg" style="width:90%;" />
+
 <img src="../assets/week4/21.jpg" style="width:90%;" />
 <img src="../assets/week4/22.jpg" style="width:90%;" />
+
+
+
+
+
 <img src="../assets/week4/23.jpg" style="width:90%;" />

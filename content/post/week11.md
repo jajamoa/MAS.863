@@ -219,8 +219,8 @@ void loop(void)
 }
 ```
 
-<img src="../assets/week11/2.jpg" style="width:50%;" />
+<img src="../assets/week11/2.jpg" style="zoom: 50%;" />
 
-<video  style="width: 60%;" controls>
+<video  style="width: 80%;" controls>
 <source src="../assets/week11/output.mp4"  type="video/mp4">
 </video>
