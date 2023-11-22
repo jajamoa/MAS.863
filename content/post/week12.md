@@ -1,22 +1,22 @@
 ---
-title: "Week11 - networking and communications"
-date: 2023-11-16T10:44:03-05:00
-draft: false
+title: "Week12 - interface and application programming"
+date: 2023-11-29T00:44:03-05:00
+draft: true
 pin: false
-summary: "design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface"
+summary: "write an application that interfaces a user with an input and/or output device that you made"
 ---
 
-## Week11 - networking and communications
+## Week12 - interface and application programming
 
 ### Assignment
 
 individual assignment:</br>
 
-- [ ]  design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface
+- [ ] write an application that interfaces a user with an input and/or output device that you made
 
 group assignment:</br>
 
-- [ ] send a message between two projects
+- [ ] compare as many tool options as possible
 
 ### Idea
 

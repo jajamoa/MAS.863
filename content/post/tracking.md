@@ -1,22 +1,14 @@
 ---
-title: "Week11 - networking and communications"
-date: 2023-11-16T10:44:03-05:00
+title: "Final Project - progress tracking"
+date: 2023-09-12T16:32:11-04:00
 draft: false
 pin: false
-summary: "design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface"
+summary: "Final project tracking page, record how to make something that fold (almost) anything strp by step."
 ---
 
-## Week11 - networking and communications
+## Final Project - progress tracking
 
 ### Assignment
-
-individual assignment:</br>
-
-- [ ]  design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface
-
-group assignment:</br>
-
-- [ ] send a message between two projects
 
 ### Idea
 

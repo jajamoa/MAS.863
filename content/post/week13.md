@@ -1,22 +1,20 @@
 ---
-title: "Week11 - networking and communications"
-date: 2023-11-16T10:44:03-05:00
-draft: false
+title: "Week13 - mechanical design"
+date: 2023-12-6T01:44:03-05:00
+draft: true
 pin: false
-summary: "design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface"
+summary: "design a machine that includes mechanism+actuation+automation+application"
 ---
 
-## Week11 - networking and communications
+## Week13 - mechanical design
 
 ### Assignment
 
-individual assignment:</br>
-
-- [ ]  design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface
-
 group assignment:</br>
 
-- [ ] send a message between two projects
+- [ ] design a machine that includes mechanism+actuation+automation+application
+- [ ] build the mechanical parts and operate it manually
+- [ ] document the group project and your individual contribution
 
 ### Idea
 

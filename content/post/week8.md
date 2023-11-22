@@ -11,17 +11,16 @@ summary: "input devices, measure something: add a sensor to a microcontroller bo
 
 individual assignment:</br>
 
-- [x] design a mold around the stock and tooling that you'll be using,
-  - [x] mill it (rough cut + three-axis finish cut),
-  - [x] and use it to cast parts
-- [x] extra credit: use more then two mold parts
+- [ ]  make (design+mill+assemble) something big (~meter-scale)
+  - [ ]  extra credit: don't use fasteners or glue
+  - [ ]  extra credit: include curved surfaces
 
 group assignment:</br>
 
-- [ ] review the safety data sheets for each of your molding and casting materials,
-  - [ ] then make and compare test casts with each of them
-- [ ] extra credit: try other molding and casting processes
+- [x] do your lab's safety training
+  - [ ] test runout, alignment, fixturing, speeds, feeds, materials, and toolpaths for your machine
 
+### Design
 <img src="../assets/week8/1.png" style="zoom:50%;" />
 <img src="../assets/week8/2.png" style="zoom:50%;" />
 <img src="../assets/week8/3.png" style="zoom:50%;" />
