@@ -21,6 +21,11 @@ group assignment:</br>
   - [ ] test runout, alignment, fixturing, speeds, feeds, materials, and toolpaths for your machine
 
 ### Design
+
+<video  style="width: 100%;" controls>
+<source src="../assets/week8/cad_process.mp4"  type="video/mp4">
+</video>
+
 <img src="../assets/week8/1.png" style="zoom:50%;" />
 <img src="../assets/week8/2.png" style="zoom:50%;" />
 <img src="../assets/week8/3.png" style="zoom:50%;" />
