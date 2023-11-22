@@ -8,19 +8,17 @@ summary: "computer-controlled cutting, model (raster, vector, 2D, 3D, render, an
 ## Week2 - computer-controlled cutting
 
 group assignment: </br>
-   
 - [ ] characterize your lasercutter's focus, power, speed, rate, kerf, joint clearance and types 
 
 individual assignment: </br>
 
 - [ ] cut something on the vinylcutter
-- [ ] design, lasercut, and document a parametric construction kit, 
-  - [ ] accounting for the lasercutter kerf, 
+- [ ] design, lasercut, and document a parametric construction kit,
+  - [ ] accounting for the lasercutter kerf,
   - [ ] which can be assembled in multiple ways,
-  - [ ] and for extra credit include elements that aren't flat 
+  - [ ] and for extra credit include elements that aren't flat
 
-
-## Parametric Design in Fusion 360
+## Parametric design in Fusion 360
 <img src="../assets/week2/laser_00.png" style="zoom:50%;" />
 <img src="../assets/week2/laser_0.png" style="zoom:50%;" />
 <img src="../assets/week2/laser_1.png" style="zoom:50%;" />

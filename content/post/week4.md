@@ -11,14 +11,14 @@ summary: "3D scanning and printing, design and 3D print an object (small, few cm
 
 individual assignment:</br>
 
-- [ ] design and 3D print an object (small, few cm3, limited by printer time) that could not be made subtractively
+- [x] design and 3D print an object (small, few cm3, limited by printer time) that could not be made subtractively
 - [x] 3D scan an object (and optionally print it)
 
 group assignment:</br>
 
 - [ ] test the design rules for your 3D printer(s)
 
-### 3D Scanning and Printing
+### 3D scanning and printing
 
 Recreating an Iconic Scene from 'The Terminator' Through 3D Scanning and Printing
 
@@ -35,3 +35,19 @@ Ready to give a thumbs-up to technology? I'm diving into 3D printing to recreate
 <img src="../assets/week4/8.png" style="zoom:50%;" />
 <img src="../assets/week4/9.png" style="zoom:50%;" />
 <img src="../assets/week4/10.jpg" style="zoom:50%;" />
+
+### Design and 3D print an object
+<img src="../assets/week1/final.jpg" style="width:90%;" />
+<img src="../assets/week4/11.png" style="width:90%;" />
+<img src="../assets/week4/12.png" style="width:90%;" />
+<img src="../assets/week4/13.png" style="width:90%;" />
+<img src="../assets/week4/14.png" style="width:90%;" />
+<img src="../assets/week4/15.png" style="width:90%;" />
+<img src="../assets/week4/16.png" style="width:90%;" />
+<img src="../assets/week4/17.png" style="width:90%;" />
+<img src="../assets/week4/18.png" style="width:90%;" />
+<img src="../assets/week4/19.png" style="width:90%;" />
+<img src="../assets/week4/20.png" style="width:90%;" />
+<img src="../assets/week4/21.jpg" style="width:90%;" />
+<img src="../assets/week4/22.jpg" style="width:90%;" />
+<img src="../assets/week4/23.jpg" style="width:90%;" />
