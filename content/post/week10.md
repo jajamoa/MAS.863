@@ -2,7 +2,7 @@
 title: "Week10 - output devices"
 date: 2023-11-15T10:44:03-05:00
 draft: false
-pin: true
+pin: false
 summary: "output devices, add an output device to a microcontroller board you've designed, and program it to do something"
 ---
 

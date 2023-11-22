@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 22 Nov 2023 06:31:39 -0500"
+                  Modified <relative-time datetime="Wed, 22 Nov 2023 13:41:49 -0500"
                     class="no-wrap">
-                    Wed, 22 Nov 2023 06:31:39 -0500</relative-time>
+                    Wed, 22 Nov 2023 13:41:49 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      43 Words
+                      503 Words
                     
 
                   </div>
@@ -198,7 +198,7 @@
 <h3 id="assignment">Assignment</h3>
 <p>individual assignment:</br></p>
 <ul>
-<li><input disabled="" type="checkbox"> design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface</li>
+<li><input checked="" disabled="" type="checkbox"> design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface</li>
 </ul>
 <p>group assignment:</br></p>
 <ul>
@@ -207,8 +207,198 @@
 <h3 id="idea">Idea</h3>
 <ol>
 <li>mqtt data receiver</li>
+<li>web compass</li>
 <li>spatial relationship detection between modular components</li>
 </ol>
+<h3 id="wi-fi-scan-and-connect">Wi-Fi Scan and Connect</h3>
+<ul>
+<li>
+<p>Scan</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;WiFi.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Set WiFi to station mode and disconnect from an AP if it was previously connected
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WiFi</span><span class="p">.</span><span class="nf">mode</span><span class="p">(</span><span class="n">WIFI_STA</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WiFi</span><span class="p">.</span><span class="nf">disconnect</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Setup done&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;scan start&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// WiFi.scanNetworks will return the number of networks found
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="nf">scanNetworks</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;scan done&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;no networks found&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34; networks found&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Print SSID and RSSI for each network found
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">SSID</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34; (&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">RSSI</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">((</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">encryptionType</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">WIFI_AUTH_OPEN</span><span class="p">)</span><span class="o">?</span><span class="s">&#34; &#34;</span><span class="o">:</span><span class="s">&#34;*&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Wait a bit before scanning again
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<img src="../assets/week11/1.png" style="zoom:50%;" />
+<ul>
+<li>
+<p>Connect</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;WiFi.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">ssid</span>     <span class="o">=</span> <span class="s">&#34;ESP_0672F1&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;Connecting to &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">ssid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">WiFi</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">status</span><span class="p">()</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;WiFi connected&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;IP address: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">localIP</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>  
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="tesing">Tesing</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;Wire.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;Adafruit_Sensor.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;Adafruit_HMC5883_U.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;WiFi.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;WiFiClient.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;WebServer.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;mainpage.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;jscript.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="cm">/* Assign a unique ID to this sensor at the same time */</span>
+</span></span><span class="line"><span class="cl"><span class="n">Adafruit_HMC5883_Unified</span> <span class="n">mag</span> <span class="o">=</span> <span class="nf">Adafruit_HMC5883_Unified</span><span class="p">(</span><span class="mi">12345</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//provide your own WiFi SSID and password
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">ssid</span>     <span class="o">=</span> <span class="s">&#34;ESP_0672F1&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">WebServer</span> <span class="nf">server</span><span class="p">(</span><span class="mi">80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//For storing data as string
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span> <span class="n">text</span><span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;HMC5883 Magnetometer Test&#34;</span><span class="p">);</span> <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="cm">/* Initialise the sensor */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">mag</span><span class="p">.</span><span class="nf">begin</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="cm">/* There was a problem detecting the HMC5883 ... check your connections */</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Ooops, no HMC5883 detected ... Check your wiring!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">//Use ESP32 as WiFi Station
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">WiFi</span><span class="p">.</span><span class="nf">mode</span><span class="p">(</span><span class="n">WIFI_STA</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Initiate WiFi Connection
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">WiFi</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Wait for connection
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">while</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">status</span><span class="p">()</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;.&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;Connected to &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Print your WiFi&#39;s SSID (might be insecure)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">ssid</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;IP address: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Print your local IP address (needed for browsing the app)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">localIP</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">//Home page. Contents of &#39;page&#39; is in mainpage.h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">server</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">,</span> <span class="p">[]()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">server</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="s">&#34;text/html&#34;</span><span class="p">,</span> <span class="n">page</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//JavaScript! Contents of &#39;javascript&#39; is in jscript.h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">server</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="s">&#34;/jscript.js&#34;</span><span class="p">,</span> <span class="p">[]()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">server</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="s">&#34;text/javascript&#34;</span><span class="p">,</span> <span class="n">javascript</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Page for reading data. Sensor is read in this part
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">server</span><span class="p">.</span><span class="nf">on</span><span class="p">(</span><span class="s">&#34;/data&#34;</span><span class="p">,</span> <span class="p">[](){</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="cm">/* Get a new sensor event */</span> 
+</span></span><span class="line"><span class="cl">    <span class="kt">sensors_event_t</span> <span class="n">event</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">mag</span><span class="p">.</span><span class="nf">getEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">heading</span> <span class="o">=</span> <span class="nf">atan2</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">declinationAngle</span> <span class="o">=</span> <span class="mf">0.0168</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">heading</span> <span class="o">+=</span> <span class="n">declinationAngle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="c1">// Correct for when signs are reversed.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">heading</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">heading</span> <span class="o">+=</span> <span class="mi">2</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      
+</span></span><span class="line"><span class="cl">    <span class="c1">// Check for wrap due to addition of declination.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">heading</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">PI</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">heading</span> <span class="o">-=</span> <span class="mi">2</span><span class="o">*</span><span class="n">PI</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="c1">// Convert radians to degrees for readability.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">float</span> <span class="n">headingDegrees</span> <span class="o">=</span> <span class="n">heading</span> <span class="o">*</span> <span class="mi">180</span><span class="o">/</span><span class="n">M_PI</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">text</span> <span class="o">=</span> <span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="n">headingDegrees</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">server</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="s">&#34;text/plain&#34;</span><span class="p">,</span> <span class="n">text</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Output the heading to the console
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;Heading: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">adsfghe</span> <span class="n">r</span> <span class="n">w</span> <span class="n">q</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//start web server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">server</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Just stating things
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;HTTP server started&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//Make the ESP32 always handle web clients
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">server</span><span class="p">.</span><span class="nf">handleClient</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><img src="../assets/week11/2.jpg" style="width:50%;" />
+<video  style="width: 60%;" controls>
+<source src="../assets/week11/output.mp4"  type="video/mp4">
+</video>
 </article>
               </div>
             </div>
