@@ -2,7 +2,7 @@
 title: "Week11 - networking and communications"
 date: 2023-11-22T00:44:03-05:00
 draft: false
-pin: true
+pin: false
 summary: "design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface"
 ---
 
@@ -73,9 +73,8 @@ group assignment:</br>
       delay(5000);
   }
   ```
-<img src="../assets/week11/1.png" style="zoom:50%;" />
+  <img src="../assets/week11/1.png" style="zoom:50%;" />
   
-
 - Connect
 
   ```c
@@ -131,8 +130,10 @@ group assignment:</br>
 Adafruit_HMC5883_Unified mag = Adafruit_HMC5883_Unified(12345);
 
 //provide your own WiFi SSID and password
-const char* ssid     = "ESP_0672F1";
+const char* ssid     = "";
 const char* password = "";   
+
+float xMax, yMax, xMin, yMin = 0.0;
 
 WebServer server(80);
 
@@ -184,10 +185,25 @@ void setup(void)
     sensors_event_t event; 
     mag.getEvent(&event);
 
-    float heading = atan2(event.magnetic.y, event.magnetic.x);
-  
-    float declinationAngle = 0.0168;
-    heading += declinationAngle;
+    if (xMax == 0.0) {
+      xMax = event.magnetic.x;
+    }
+
+    if (yMax == 0.0) {
+      yMax = event.magnetic.y;
+    }
+
+    xMax = max(xMax, event.magnetic.x);
+    yMax = max(yMax, event.magnetic.y);
+    xMin = min(xMin, event.magnetic.x);
+    yMin = min(yMin, event.magnetic.y);
+
+    float ymax_rounded = round(yMax * 100) / 100.0;
+    float ymin_rounded = round(yMin * 100) / 100.0;
+    float xmax_rounded = round(xMax * 100) / 100.0;
+    float xmin_rounded = round(xMin * 100) / 100.0;
+
+    float heading = atan2((event.magnetic.y - ((yMax + yMin) / 2.0)), (event.magnetic.x - ((xMax + xMin) / 2.0)));
     
     // Correct for when signs are reversed.
     if(heading < 0)
@@ -204,7 +220,7 @@ void setup(void)
 
     // Output the heading to the console
     Serial.print("Heading: ");
-    Serial.println(adsfghe r w q a);
+    Serial.println(heading);
   });
   //start web server
   server.begin();

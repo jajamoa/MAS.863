@@ -1,7 +1,7 @@
 # relativeURLs = false
 baseURL = "https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/"
 languageCode = "en-us"
-title = "Chance's Sketchpad"
+title = "HTM(A)A | Chance's Sketchpad"
 theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true

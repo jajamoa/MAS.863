@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/light.css' />
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/dark.css' />
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/syntax.css' />
-    <title>Week11 - networking and communications - Chance&#39;s Sketchpad</title>
+    <title>Week11 - networking and communications - HTM(A)A | Chance&#39;s Sketchpad</title>
     
     <link rel="icon" type="image/x-icon" href='/images/favicon.ico'>
     
@@ -26,7 +26,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Week11 - networking and communications - Chance&#39;s Sketchpad" />
+<meta name="twitter:title" content="Week11 - networking and communications - HTM(A)A | Chance&#39;s Sketchpad" />
 <meta name="twitter:description"
   content="design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface" />
 <meta name="twitter:site" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/" />
@@ -36,7 +36,7 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Week11 - networking and communications - Chance&#39;s Sketchpad">
+<meta property="og:title" content="Week11 - networking and communications - HTM(A)A | Chance&#39;s Sketchpad">
 <meta property="og:description"
   content="design, build, and connect wired or wireless node(s) with network or bus addresses and a local interface" />
 <meta property="og:url" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week11/" />
@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 22 Nov 2023 13:50:45 -0500"
+                  Modified <relative-time datetime="Wed, 29 Nov 2023 13:32:18 -0500"
                     class="no-wrap">
-                    Wed, 22 Nov 2023 13:50:45 -0500</relative-time>
+                    Wed, 29 Nov 2023 13:32:18 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      503 Words
+                      577 Words
                     
 
                   </div>
@@ -257,10 +257,8 @@
 </span></span><span class="line"><span class="cl">    <span class="c1">// Wait a bit before scanning again
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div></li>
-</ul>
-<img src="../assets/week11/1.png" style="zoom:50%;" />
-<ul>
+</span></span></code></pre></div><img src="../assets/week11/1.png" style="zoom:50%;" />
+</li>
 <li>
 <p>Connect</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;WiFi.h&gt;</span><span class="cp">
@@ -309,8 +307,10 @@
 </span></span><span class="line"><span class="cl"><span class="n">Adafruit_HMC5883_Unified</span> <span class="n">mag</span> <span class="o">=</span> <span class="nf">Adafruit_HMC5883_Unified</span><span class="p">(</span><span class="mi">12345</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">//provide your own WiFi SSID and password
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">ssid</span>     <span class="o">=</span> <span class="s">&#34;ESP_0672F1&#34;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">ssid</span>     <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">password</span> <span class="o">=</span> <span class="s">&#34;&#34;</span><span class="p">;</span>   
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">xMax</span><span class="p">,</span> <span class="n">yMax</span><span class="p">,</span> <span class="n">xMin</span><span class="p">,</span> <span class="n">yMin</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">WebServer</span> <span class="nf">server</span><span class="p">(</span><span class="mi">80</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -362,10 +362,25 @@
 </span></span><span class="line"><span class="cl">    <span class="kt">sensors_event_t</span> <span class="n">event</span><span class="p">;</span> 
 </span></span><span class="line"><span class="cl">    <span class="n">mag</span><span class="p">.</span><span class="nf">getEvent</span><span class="p">(</span><span class="o">&amp;</span><span class="n">event</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">heading</span> <span class="o">=</span> <span class="nf">atan2</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">declinationAngle</span> <span class="o">=</span> <span class="mf">0.0168</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="n">heading</span> <span class="o">+=</span> <span class="n">declinationAngle</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">xMax</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">xMax</span> <span class="o">=</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">x</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">yMax</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">yMax</span> <span class="o">=</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">xMax</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">xMax</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">yMax</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">yMax</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">xMin</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">xMin</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">yMin</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">yMin</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">ymax_rounded</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">yMax</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">ymin_rounded</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">yMin</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">xmax_rounded</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">xMax</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">xmin_rounded</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">xMin</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">float</span> <span class="n">heading</span> <span class="o">=</span> <span class="nf">atan2</span><span class="p">((</span><span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">y</span> <span class="o">-</span> <span class="p">((</span><span class="n">yMax</span> <span class="o">+</span> <span class="n">yMin</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)),</span> <span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">x</span> <span class="o">-</span> <span class="p">((</span><span class="n">xMax</span> <span class="o">+</span> <span class="n">xMin</span><span class="p">)</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)));</span>
 </span></span><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    <span class="c1">// Correct for when signs are reversed.
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span><span class="p">(</span><span class="n">heading</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
@@ -382,7 +397,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="c1">// Output the heading to the console
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;Heading: &#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">adsfghe</span> <span class="n">r</span> <span class="n">w</span> <span class="n">q</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="n">heading</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">});</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">//start web server
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">server</span><span class="p">.</span><span class="nf">begin</span><span class="p">();</span>
