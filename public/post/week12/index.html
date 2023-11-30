@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/github.min.css' />
+    <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/github-style.css' />
+    <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/light.css' />
+    <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/dark.css' />
+    <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/syntax.css' />
+    <title>Week12 - interface and application programming - HTM(A)A | Chance&#39;s Sketchpad</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/favicon.ico'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="write an application that interfaces a user with an input and/or output device that you made" />
+<meta name="keywords"
+  content='MIT, MAS.863, How To Make (almost) Anything 2023' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week12/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Week12 - interface and application programming - HTM(A)A | Chance&#39;s Sketchpad" />
+<meta name="twitter:description"
+  content="write an application that interfaces a user with an input and/or output device that you made" />
+<meta name="twitter:site" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Week12 - interface and application programming - HTM(A)A | Chance&#39;s Sketchpad">
+<meta property="og:description"
+  content="write an application that interfaces a user with an input and/or output device that you made" />
+<meta property="og:url" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week12/" />
+<meta property="og:site_name" content="Week12 - interface and application programming" />
+<meta property="og:image"
+  content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2023-11-29 00:44:03 -0500 EST" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
+        <svg class="octicon" height="32" viewBox="0 0 16 16" version="1.1" width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <svg height="24" class="octicon octicon-three-bars" viewBox="0 0 16 16" version="1.1" width="24">
+          <path fill-rule="evenodd"
+            d="M1 2.75A.75.75 0 011.75 2h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 2.75zm0 5A.75.75 0 011.75 7h12.5a.75.75 0 110 1.5H1.75A.75.75 0 011 7.75zM1.75 12a.75.75 0 100 1.5h12.5a.75.75 0 100-1.5H1.75z">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
+        <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1"
+          width="32">
+          <path fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+          </path>
+        </svg>
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
+                  <img class=" avatar-user"
+                    src="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/images/avatar.png"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">Chance Jiajie Li</a></span><span
+                    class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
+                      href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week12/">Week12 - interface and application programming</a></strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Wed, 29 Nov 2023 00:44:03 -0500"
+                    class="no-wrap">
+                    Wed, 29 Nov 2023 00:44:03 -0500</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Thu, 30 Nov 2023 11:41:04 -0500"
+                    class="no-wrap">
+                    Thu, 30 Nov 2023 11:41:04 -0500</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      405 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h2 id="week12---interface-and-application-programming">Week12 - interface and application programming</h2>
+<h3 id="assignment">Assignment</h3>
+<p>individual assignment:</br></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> write an application that interfaces a user with an input and/or output device that you made</li>
+</ul>
+<p>group assignment:</br></p>
+<ul>
+<li><input disabled="" type="checkbox"> compare as many tool options as possible</li>
+</ul>
+<h3 id="idea">Idea</h3>
+<ol>
+<li>Control the compass with a geomagnetic sensor</li>
+<li>Control a three-dimensional rod with a geomagnetic sensor</li>
+</ol>
+<h3 id="input">Input</h3>
+<h4 id="calibration">Calibration</h4>
+<p>Calibration of a geomagnetic sensor like the HMC5883L magnetometer is vital for accurate readings. It involves rotating the sensor 360 degrees to record maximum and minimum values, adjusting for distortions in the magnetic field. This process is crucial in environments without magnetic interferences. Additionally, accounting for magnetic declination, the difference between magnetic and true north, is essential for precise heading measurements</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">xMax</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">xMax</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">yMax</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">yMax</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">xMin</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">xMin</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">x</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">yMin</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">yMin</span><span class="p">,</span> <span class="n">event</span><span class="p">.</span><span class="n">magnetic</span><span class="p">.</span><span class="n">y</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">ymax_rounded</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">yMax</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">ymin_rounded</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">yMin</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">xmax_rounded</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">xMax</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">float</span> <span class="n">xmin_rounded</span> <span class="o">=</span> <span class="nf">round</span><span class="p">(</span><span class="n">xMin</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="mf">100.0</span><span class="p">;</span>
+</span></span></code></pre></div><h4 id="video">Video</h4>
+<video  style="width: 80%;" controls>
+<source src="../assets/week11/output.mp4"  type="video/mp4">
+</video>
+<h3 id="compass">Compass</h3>
+<h4 id="code">Code</h4>
+<p><strong>jscript.h</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">String</span> <span class="n">javascript</span> <span class="n">PROGMEM</span> <span class="o">=</span> <span class="s">&#34; $(document).ready(function(){</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  setInterval(getData,100);</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; function getData(){</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  $.ajax({</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  type:</span><span class="se">\&#34;</span><span class="s">GET</span><span class="se">\&#34;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  url:</span><span class="se">\&#34;</span><span class="s">data</span><span class="se">\&#34;</span><span class="s">,</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  success: function(data){</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  $(&#39;#heading-value&#39;).val(data);</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  theta = data - 90;</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  $(&#39;#arrow&#39;).css({&#39;transform&#39; : &#39;rotate(&#39;+ theta +&#39;deg)&#39;});</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;}</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;}).done(function() {</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; console.log(&#39;ok&#39;); &#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;})</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;}</span><span class="se">\r\n</span><span class="s">&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;});&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><p><strong>mainpage.h</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">String</span> <span class="n">page</span> <span class="n">PROGMEM</span> <span class="o">=</span> <span class="s">&#34;&lt;head&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;meta name=&#39;viewport&#39; content=&#39;width=device-width, initial-scale=1.0&#39;&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;script src=&#39;https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js&#39;&gt;&lt;/script&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;script src=&#39;/jscript.js&#39;&gt;&lt;/script&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;link href=&#39;https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap&#39; rel=&#39;stylesheet&#39;&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;style&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; body{&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; background-color:white;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; font-family: &#39;Roboto&#39;, sans-serif;&#34;</span> 
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;}&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;#tmm-logo{&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  margin-top: 100px;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  margin-left: 50%;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;  width:50%;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;}&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;#arrow{&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;width: 50%;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;margin-top: 50px;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;margin-left: 20%;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;$(&#39;#arrow&#39;).css({&#39;transform&#39; : &#39;rotate(270deg)&#39;});&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;}&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;&lt;/style&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;/head&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;body&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;h1&gt;ESP32 Magnetometer&lt;/h1&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;label for=&#39;heading-value&#39;&gt;Heading (degrees from N):&lt;/label&gt; &lt;input type=&#39;text&#39; id=&#39;heading-value&#39;&gt;&#34;&#34;&lt;/p&gt;</span><span class="se">\r\n</span><span class="s">&#34;</span> 
+</span></span><span class="line"><span class="cl">            <span class="s">&#34; &lt;img id=&#39;arrow&#39; src=&#39;https://i.imgur.com/nFnBZwW.png&#39;/&gt;</span><span class="se">\r\n</span><span class="s"> &#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="s">&#34;&lt;/body&gt;&#34;</span><span class="p">;</span>
+</span></span></code></pre></div><h4 id="video-1">Video</h4>
+<video  style="width: 80%;" controls>
+<source src="../assets/week12/compass.mp4"  type="video/mp4">
+</video>
+<h3 id="3d-rod">3D Rod</h3>
+<h4 id="3d-physic-library">3D Physic Library</h4>
+<p>For 3D physics, there are three main libraries:</p>
+<ol>
+<li>Ammo.js
+<ul>
+<li>Website: <a href="http://schteppe.github.io/ammo.js-demos/">http://schteppe.github.io/ammo.js-demos/</a></li>
+<li>Git repository: <a href="https://github.com/kripken/ammo.js/">https://github.com/kripken/ammo.js/</a></li>
+<li>Documentation: No documentation</li>
+<li>Direct JavaScript port of Bullet (a physics engine written in C++)</li>
+<li>A little heavy</li>
+<li>Still updated by a community</li>
+</ul>
+</li>
+<li>Cannon.js
+<ul>
+<li>Website: <a href="https://schteppe.github.io/cannon.js/">https://schteppe.github.io/cannon.js/</a></li>
+<li>Git repository: <a href="https://github.com/schteppe/cannon.js">https://github.com/schteppe/cannon.js</a></li>
+<li>Documentation: <a href="http://schteppe.github.io/cannon.js/docs/">http://schteppe.github.io/cannon.js/docs/</a></li>
+<li>Lighter than Ammo.js</li>
+<li>More comfortable to implement than Ammo.js</li>
+<li>Mostly maintained by one developer</li>
+<li>Hasn&rsquo;t been updated for many years</li>
+<li>There is a maintained fork</li>
+</ul>
+</li>
+<li>Oimo.js
+<ul>
+<li>Website: <a href="https://lo-th.github.io/Oimo.js/">https://lo-th.github.io/Oimo.js/</a></li>
+<li>Git repository: <a href="https://github.com/lo-th/Oimo.js">https://github.com/lo-th/Oimo.js</a></li>
+<li>Documentation: <a href="http://lo-th.github.io/Oimo.js/docs.html">http://lo-th.github.io/Oimo.js/docs.html</a></li>
+<li>Lighter than Ammo.js</li>
+<li>Easier to implement than Ammo.js</li>
+<li>Mostly maintained by one developer</li>
+<li>Hasn&rsquo;t been updated for 2 years</li>
+</ul>
+</li>
+<li>Rapier
+<ul>
+<li>Website: <a href="https://rapier.rs/">https://rapier.rs/</a></li>
+<li>Git repository: <a href="https://github.com/dimforge/rapier">https://github.com/dimforge/rapier</a></li>
+<li>Documentation: <a href="https://rapier.rs/javascript3d/index.html">https://rapier.rs/javascript3d/index.html</a></li>
+<li>Very similar to Cannon.js</li>
+<li>Good performance</li>
+<li>Currently maintained</li>
+</ul>
+</li>
+</ol>
+<h4 id="video-2">Video</h4>
+<video  style="width: 80%;" controls>
+<source src="../assets/week12/rod.mp4"  type="video/mp4">
+</video>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/js/toc.js'></script>
+<link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/toc.css' />
+
+<div id="gitalk-container" class="gitalk-container"></div>
+<link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/gitalk.css'>
+<script src='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/js/gitalk.min.js'></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'c439c2f976c9d95c4f30',
+    clientSecret: '9775261fe1d02bbc5ed8dc618b58b90ea4a9f4c3',
+    repo: 'MAS.863',
+    owner: 'LeeJAJA',
+    admin: ['LeeJAJA'],
+    id: eval("location.pathname"), 
+    distractionFreeMode: false 
+  });
+  (function() {
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Powered by <a href='https://fab.cba.mit.edu/classes/MAS.863/'>How To Make (almost) Anything</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/js/github-style.js"></script>
+
+
+
+
+</html>

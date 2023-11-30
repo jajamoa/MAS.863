@@ -6,8 +6,15 @@
     <description>Recent content on HTM(A)A | Chance&#39;s Sketchpad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Nov 2023 00:44:03 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 29 Nov 2023 00:44:03 -0500</lastBuildDate>
     <atom:link href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week12 - interface and application programming</title>
+      <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week12/</link>
+      <pubDate>Wed, 29 Nov 2023 00:44:03 -0500</pubDate>
+      <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week12/</guid>
+      <description>write an application that interfaces a user with an input and/or output device that you made</description>
+    </item>
     <item>
       <title>Week11 - networking and communications</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week11/</link>
