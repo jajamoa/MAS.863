@@ -2,7 +2,7 @@
 title: "Week13 - mechanical design"
 date: 2023-12-06T01:44:03-05:00
 draft: false
-pin: true
+pin: false
 summary: "design a machine that includes mechanism+actuation+automation+application"
 ---
 
