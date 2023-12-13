@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the path to the directory containing the folders
-root_path="./content/post/assets/week12"
+root_path="./content/post/assets/week14"
 
 # Set the size threshold in bytes
 size_threshold_video=10000000

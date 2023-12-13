@@ -1,8 +1,8 @@
 ---
 title: "Week13 - mechanical design"
-date: 2023-12-6T01:44:03-05:00
-draft: true
-pin: false
+date: 2023-12-06T01:44:03-05:00
+draft: false
+pin: true
 summary: "design a machine that includes mechanism+actuation+automation+application"
 ---
 
@@ -12,8 +12,8 @@ summary: "design a machine that includes mechanism+actuation+automation+applicat
 
 group assignment:</br>
 
-- [ ] design a machine that includes mechanism+actuation+automation+application
-- [ ] build the mechanical parts and operate it manually
+- [x] design a machine that includes mechanism+actuation+automation+application
+- [x] build the mechanical parts and operate it manually
 - [ ] document the group project and your individual contribution
 
 ### Idea
