@@ -2,7 +2,7 @@
 title: "Week12 - interface and application programming"
 date: 2023-11-29T00:44:03-05:00
 draft: false
-pin: true
+pin: false
 summary: "write an application that interfaces a user with an input and/or output device that you made"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Week14 - wildcard week"
-date: 2023-12-12T01:44:03-05:00
+date: 2023-12-13T01:44:03-05:00
 draft: false
 pin: true
 summary: "design and produce something with a digital fabrication process not covered in another assignment"
