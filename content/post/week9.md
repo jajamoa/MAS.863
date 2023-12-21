@@ -16,7 +16,21 @@ individual assignment:</br>
 
 group assignment:</br>
 
-- [ ] probe an input device's analog levels and digital signals
+- [x] probe an input device's analog levels and digital signals
+
+## Group Assignment
+
+Vincy and I used a multimeter to probe the input of a slider rail. We found that its resistance value gradually changes from 10k ohms to less than 1k ohms, depending on the position of the slider knob.
+<img src="../assets/week9/g1.jpg" style="width:50%;" />
+
+<img src="../assets/week9/g2.jpg" style="width:50%;" />
+
+<img src="../assets/week9/g3.jpg" style="width:50%;" />
+
+<img src="../assets/week9/g4.jpg" style="width:50%;" />
+
+
+## Individual Assignment
 
 ### Idea
 
