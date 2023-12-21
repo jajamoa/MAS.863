@@ -42,6 +42,14 @@ I finished MARS lab's safety training : )
 <img src="../assets/week8/2.png" style="zoom:50%;" />
 <img src="../assets/week8/3.png" style="zoom:50%;" />
 
+### Tesing with Cardboard
+
+<img src="../assets/week2/cut_3.jpg" style="width:90%;" />
+<img src="../assets/week2/cut_4.jpg" style="width:90%;" />
+<img src="../assets/week2/cut_5.jpg" style="width:90%;" />
+<img src="../assets/week2/cut_thread.jpg" style="width:90%;" />
+<img src="../assets/week2/cut_6.jpg" style="width:90%;" />
+
 ### Cut
 
 <img src="../assets/week8/4.jpg" style="zoom:50%;" />
