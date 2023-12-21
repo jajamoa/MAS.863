@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Thu, 21 Dec 2023 04:26:11 -0500"
+                  Modified <relative-time datetime="Thu, 21 Dec 2023 05:22:49 -0500"
                     class="no-wrap">
-                    Thu, 21 Dec 2023 04:26:11 -0500</relative-time>
+                    Thu, 21 Dec 2023 05:22:49 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      78 Words
+                      263 Words
                     
 
                   </div>
@@ -198,20 +198,88 @@
 <h3 id="assignment">Assignment</h3>
 <p>individual assignment:</br></p>
 <ul>
-<li><input disabled="" type="checkbox"> browse through the data sheet for your microcontroller</li>
-<li><input disabled="" type="checkbox"> write program for a microcontroller development board
+<li><input checked="" disabled="" type="checkbox"> browse through the data sheet for your microcontroller</li>
+<li><input checked="" disabled="" type="checkbox"> write program for a microcontroller development board
 <ul>
-<li><input disabled="" type="checkbox"> to interact (with local input &amp;/or output devices)</li>
-<li><input disabled="" type="checkbox"> and communicate (with remote wired or wireless devices)</li>
+<li><input checked="" disabled="" type="checkbox"> to interact (with local input &amp;/or output devices)</li>
+<li><input checked="" disabled="" type="checkbox"> and communicate (with remote wired or wireless devices)</li>
 </ul>
 </li>
-<li><input disabled="" type="checkbox"> extra credit: use different languages &amp;/or development environments</li>
-<li><input disabled="" type="checkbox"> extra credit: connect external components to the board</li>
+<li><input checked="" disabled="" type="checkbox"> extra credit: use different languages &amp;/or development environments</li>
+<li><input checked="" disabled="" type="checkbox"> extra credit: connect external components to the board</li>
 </ul>
 <p>group assignment:</br></p>
 <ul>
 <li><input disabled="" type="checkbox"> compare the performance and development workflows for other architectures (I was on waitlist this week, so I didn&rsquo;t attend the group assignment)</li>
 </ul>
+<h3 id="wi-fi-scan-and-connect-using-xiao-esp32c3--arduino-ide">Wi-Fi Scan and Connect using XIAO ESP32C3 + Arduino IDE</h3>
+<p>Data Sheet of XIAO ESP32C3 <a href="https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html">Link</a></p>
+<ul>
+<li>
+<p>Scan</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&#34;WiFi.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Set WiFi to station mode and disconnect from an AP if it was previously connected
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">WiFi</span><span class="p">.</span><span class="nf">mode</span><span class="p">(</span><span class="n">WIFI_STA</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">WiFi</span><span class="p">.</span><span class="nf">disconnect</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">delay</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Setup done&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;scan start&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// WiFi.scanNetworks will return the number of networks found
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">WiFi</span><span class="p">.</span><span class="nf">scanNetworks</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;scan done&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;no networks found&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34; networks found&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">// Print SSID and RSSI for each network found
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;: &#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">SSID</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34; (&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">RSSI</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;)&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">((</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">encryptionType</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">WIFI_AUTH_OPEN</span><span class="p">)</span><span class="o">?</span><span class="s">&#34; &#34;</span><span class="o">:</span><span class="s">&#34;*&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="nf">delay</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// Wait a bit before scanning again
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nf">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><img src="../assets/week11/1.png" style="zoom:50%;" />
+<img src="../assets/week11/2.jpg" style="zoom: 50%;" />
+</li>
+</ul>
+<h3 id="light-a-led-using-pico-w--thonny">Light a LED using PICO W + Thonny</h3>
+<p>Data Sheet of PICO W <a href="https://datasheets.raspberrypi.com/picow/pico-w-datasheet.pdf">Link</a></p>
+  <img src="../assets/week3/1.png" style="zoom:50%;" />
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">machine</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">time</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">led</span> <span class="o">=</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">machine</span><span class="o">.</span><span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span> <span class="c1">#configure GPIO-15 Pin as an output pin and create and led object for Pin class</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>  <span class="c1">#turn on the LED</span>
+</span></span><span class="line"><span class="cl"><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">#wait for one second</span>
+</span></span><span class="line"><span class="cl"><span class="n">led</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>  <span class="c1">#turn off the LED</span>
+</span></span><span class="line"><span class="cl"><span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>   <span class="c1">#wait for one second</span>
+</span></span></code></pre></div><video  style="width: 100%;" controls>
+<source src="../assets/week3/1.mp4"  type="video/mp4">
+</video>
 </article>
               </div>
             </div>
