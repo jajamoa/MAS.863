@@ -20,4 +20,4 @@ individual assignment:</br>
 
 group assignment:</br>
 
-- [ ] compare the performance and development workflows for other architectures
+- [ ] compare the performance and development workflows for other architectures (I was on waitlist this week, so I didn't attend the group assignment)
