@@ -18,7 +18,30 @@ individual assignment:</br>
 
 group assignment:</br>
 
-- [ ] use the test equipment in your lab to observe the operation of a microcontroller circuit board
+- [x] use the test equipment in your lab to observe the operation of a microcontroller circuit board
+
+## Group Assignment
+
+Vincy and I attempted to use an oscilloscope to monitor the output of the analog pinout on a Xiao RP2040 microcontroller circuit board. We observed varying duty cycle changes.
+<img src="../assets/week5/g1.jpg" style="zoom:50%;" />
+
+We tried three different duty cycle percentages: 0%, 40%, and 80%.
+
+<video  style="width: 80%;" controls>
+<source src="../assets/week5/g1.mp4"  type="video/mp4">
+</video>
+
+<video  style="width: 80%;" controls>
+<source src="../assets/week5/g2.mp4"  type="video/mp4">
+</video>
+
+
+<video  style="width: 80%;" controls>
+<source src="../assets/week5/g3.mp4"  type="video/mp4">
+</video>
+
+
+## Individual Assignment
 
 ### Eagle Design Flow
 <img src="../assets/week5/eagle1.jpg" style="zoom:50%;" />

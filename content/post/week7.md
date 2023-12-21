@@ -18,9 +18,21 @@ individual assignment:</br>
 
 group assignment:</br>
 
-- [ ] review the safety data sheets for each of your molding and casting materials,
+- [x] review the safety data sheets for each of your molding and casting materials,
   - [ ] then make and compare test casts with each of them
 - [ ] extra credit: try other molding and casting processes
+
+## Group Assignment
+
+Vincy and I have revisited and reviewed all the safety data sheets for our molding and casting materials at the MARS Lab.
+
+<img src="../assets/week7/g1.jpg" style="width:50%;" />
+
+<img src="../assets/week7/g2.jpg" style="width:50%;" />
+
+<img src="../assets/week7/g3.jpg" style="width:50%;" />
+
+## Individual Assignment
 
 ### Design a mold in Fusion 360
 <img src="../assets/week7/0.png" style="width:90%;" />

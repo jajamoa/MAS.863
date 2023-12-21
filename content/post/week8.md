@@ -21,6 +21,12 @@ group assignment:</br>
   - [ ] test runout, alignment, fixturing, speeds, feeds, materials, and toolpaths for your machine
 
 
+## Group Assignment
+
+I finished MARS lab's safety training : )
+
+## Individual Assignment
+
 ### Results
 <video  style="width: 100%;" controls>
 <source src="../assets/week8/final.mp4"  type="video/mp4">
