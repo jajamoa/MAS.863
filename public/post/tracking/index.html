@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Thu, 21 Dec 2023 06:31:38 -0500"
+                  Modified <relative-time datetime="Thu, 21 Dec 2023 08:33:45 -0500"
                     class="no-wrap">
-                    Thu, 21 Dec 2023 06:31:38 -0500</relative-time>
+                    Thu, 21 Dec 2023 08:33:45 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      976 Words
+                      1170 Words
                     
 
                   </div>
@@ -335,26 +335,13 @@ Designing and constructing the <em><strong>Electro-Mech-Hydraulic(EMH) Reader</s
 </ul>
 </li>
 </ul>
-<h3 id="progress-tracking">Progress Tracking</h3>
-<ul>
-<li>conception</li>
-<li>construction</li>
-<li>and operation</li>
-</ul>
-<h3 id="idea-iterations">Idea Iterations</h3>
-<ul>
-<li>Design a robot that can fold a sheet of origami paper in half on a table as shown in Fig.1. The accuracy of folding must be the same as for a human and the robot
-configuration should be as simple as possible.</li>
-<li>The approach to design a specialized machine should not be taken. In other words, keep the table flat and do not use any jigs.</li>
-<li>Do not be constrained by the appearance of the human hand when designing a robot hand.</li>
-</ul>
-<img src="../assets/tracking/o1.jpg"  style="width: 80%;"  />
-<img src="../assets/tracking/o2.jpg"  style="width: 80%;"  />
-<img src="../assets/tracking/o3.jpg"  style="width: 80%;"  />
-<h3 id="mechanical-design">Mechanical Design</h3>
-<img src="../assets/tracking/0.jpg"  style="width: 80%;"  />
-<img src="../assets/tracking/1.jpg"  style="width: 80%;"  />
-<img src="../assets/tracking/2.jpg"  style="width: 80%;"  />
+<h3 id="conception">Conception</h3>
+<h3 id="constructionprogress-tracking">Construction(progress tracking)</h3>
+<h4 id="mechanical-part">Mechanical Part</h4>
+<h5 id="1st-spiral">1st Spiral</h5>
+<img src="../assets/tracking/0.jpg"  style="zoom: 80%;"  />
+<img src="../assets/tracking/1.jpg"  style="zoom: 80%;"  />
+<img src="../assets/tracking/2.jpg"  style="zoom: 80%;"  />
 <img src="../assets/tracking/3.jpg"  style="width: 80%;"  />
 <img src="../assets/tracking/me1.jpg"  style="width: 80%;"  />
 <video  style="width: 80%;" controls>
@@ -367,8 +354,104 @@ configuration should be as simple as possible.</li>
 <img src="../assets/tracking/6.jpg"  style="width: 80%;"  />
 <img src="../assets/tracking/7.jpg"  style="width: 80%;"  />
 <img src="../assets/tracking/5.jpg"  style="width: 80%;"  />
-<h3 id="electrical-design">Electrical Design</h3>
-<img src="../assets/tracking/ee1.svg"  style="width: 80%;"  /></article>
+<h4 id="electrical-part">Electrical Part</h4>
+<h5 id="1st-spiral---tmc2209">1st Spiral - TMC2209</h5>
+<ol>
+<li>SpeedyStepper.h
+<ol>
+<li><a href="https://forum.arduino.cc/t/using-a-tmc2209-silent-stepper-motor-driver-with-an-arduino/666992/40">https://forum.arduino.cc/t/using-a-tmc2209-silent-stepper-motor-driver-with-an-arduino/666992/40</a>)</li>
+<li><a href="https://forum.arduino.cc/t/using-a-tmc2209-silent-stepper-motor-driver-with-an-arduino/666992/14">https://forum.arduino.cc/t/using-a-tmc2209-silent-stepper-motor-driver-with-an-arduino/666992/14</a></li>
+</ol>
+</li>
+<li>software serial
+<ol>
+<li><a href="https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/#usage-of-software-serial">https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/#usage-of-software-serial</a></li>
+<li><a href="https://arduino.stackexchange.com/questions/26240/which-pins-of-an-arduino-uno-can-be-used-as-tx-and-rx-pins-for-connecting-to-gsm#26277">https://arduino.stackexchange.com/questions/26240/which-pins-of-an-arduino-uno-can-be-used-as-tx-and-rx-pins-for-connecting-to-gsm#26277</a></li>
+<li><a href="https://github.com/SlashDevin/NeoSWSerial">https://github.com/SlashDevin/NeoSWSerial</a></li>
+</ol>
+</li>
+<li>example code in TMC2209.h repo
+<ol>
+<li><a href="https://github.com/janelia-arduino/TMC2209">https://github.com/janelia-arduino/TMC2209</a></li>
+</ol>
+</li>
+</ol>
+<img src="../assets/final/sche.png"  style="width: 80%;"  />
+<img src="../assets/final/tmc1.jpg"  style="width: 80%;"  />
+<h5 id="2nd-spiral---drv8428">2nd Spiral - DRV8428</h5>
+<p>this is what I want to reproduce
+<video  style="width: 80%;" controls></p>
+<source src="../assets/tracking/example.mp4"  type="video/mp4">
+</video>
+<img src="../assets/final/e1.png"  style="width: 80%;"  />
+<img src="../assets/final/e2.png"  style="width: 80%;"  />
+<img src="../assets/final/interior2.png"  style="width: 80%;"  />
+<img src="../assets/final/trace2.png"  style="width: 80%;"  />
+<img src="../assets/final/drv4.jpg"  style="width: 80%;"  />
+<img src="../assets/final/drv1.jpg"  style="width: 80%;"  />
+<img src="../assets/final/drv2.jpg"  style="width: 80%;"  />
+<img src="../assets/final/drv3.jpg"  style="width: 80%;"  />
+<h5 id="3rd-spiral">3rd Spiral</h5>
+<img src="../assets/final/interior.png"  style="width: 80%;"  />
+<img src="../assets/final/trace.png"  style="width: 80%;"  />
+<img src="../assets/final/trace_cut.png"  style="width: 80%;"  />
+<img src="../assets/final/trace_mods.png"  style="width: 80%;"  />
+<img src="../assets/week6/6.jpg" style="zoom:50%;" />
+<p>Stepper-hbridge-xiao - <a href="https://modular-things.github.io/modular-things/things/stepper-hbridge-xiao/">https://modular-things.github.io/modular-things/things/stepper-hbridge-xiao/</a>
+<img src="../assets/final/modular.png"  style="width: 100%;"  /></p>
+<p>fixed(resolder+reflash firmware) a few modular things, and then they work
+<img src="../assets/final/mod1.jpg"  style="width: 80%;"  /></p>
+<h4 id="interface-part">Interface Part</h4>
+<!-- ### operation -->
+<h3 id="previous-idea-iterations">Previous Idea Iterations</h3>
+<h4 id="1st-version">1st Version</h4>
+<p>I was initially planning to develop a modular paper airplane folding machine. I find this project intriguing and drew inspiration from a LEGO creation. I am contemplating the possibility of creating a modularized, faster, and more flexible paper folding device. Through the combination of various modules, it can fold (almost) anything.</p>
+<ul>
+<li>
+<p>LEGO paper airplane maker
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/-eNm6MYqgO8" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+</p>
+</li>
+<li>
+<p>Primary Paper Folds</p>
+</li>
+</ul>
+<img src="../assets/final/folds.png" alt="avatar" width="60%" />
+<ul>
+<li>Z-Fold Machine</li>
+</ul>
+<img src="../assets/final/zfold.png" alt="avatar" />
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/EK1xPAsIV9k" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<ul>
+<li>3D printed Paper folding machine</li>
+</ul>
+<img src="../assets/final/3d2.jpg" alt="avatar"  />
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/Hg4_dVEAZho" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h4 id="2nd-version">2nd Version</h4>
+<p>Origami Folding by a Robotic Hand, this study, conducted by Kenta Tanaka, Yusuke Kamotani, and Yasuyoshi Yokokohji, explores the application of a robotic hand in the art of origami folding. Through their experiments, they demonstrate that a system comprised of four three-degree-of-freedom robotic arms can perform precise manipulation of paper, enabling it to accomplish intricate origami tasks. The findings of this research highlight the advanced capabilities of robotic hands in engaging in origami activities. <a href="https://www.fujipress.jp/jrm/rb/robot002000040550/">Link</a></p>
+<img src="../assets/tracking/o1.jpg"  style="zoom: 70%;"  />
+<img src="../assets/tracking/o2.jpg"  style="zoom: 50%;"  />
+<img src="../assets/tracking/o3.jpg"  style="zoom: 50%;"  />
+<p></br></br></p>
+<p>design purpose and goals</p>
+<ul>
+<li>Design a robot that can fold a sheet of origami paper in half on a table as shown in Fig.1. The accuracy of folding must be the same as for a human and the robot
+configuration should be as simple as possible.</li>
+<li>The approach to design a specialized machine should not be taken. In other words, keep the table flat and do not use any jigs.</li>
+<li>Do not be constrained by the appearance of the human hand when designing a robot hand.</li>
+</ul>
+</article>
               </div>
             </div>
           </div>

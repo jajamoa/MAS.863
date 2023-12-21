@@ -87,28 +87,16 @@ Following the requirements and structure of this page https://academy.cba.mit.ed
      - **What are the implications?**
        - **Cost-Effective Automation**: By leveraging hydraulic flexibility to enhance force output within a constrained budget(<$10), the project demonstrates a practical approach to achieving robust automation in economically limited environments.
 
-### Progress Tracking
+### Conception
 
-- conception
-- construction
-- and operation
+### Construction(progress tracking)
 
-### Idea Iterations
+#### Mechanical Part
 
-- Design a robot that can fold a sheet of origami paper in half on a table as shown in Fig.1. The accuracy of folding must be the same as for a human and the robot
-configuration should be as simple as possible.
-- The approach to design a specialized machine should not be taken. In other words, keep the table flat and do not use any jigs.
-- Do not be constrained by the appearance of the human hand when designing a robot hand. 
-
-<img src="../assets/tracking/o1.jpg"  style="width: 80%;"  />
-<img src="../assets/tracking/o2.jpg"  style="width: 80%;"  />
-<img src="../assets/tracking/o3.jpg"  style="width: 80%;"  />
-
-
-### Mechanical Design
-<img src="../assets/tracking/0.jpg"  style="width: 80%;"  />
-<img src="../assets/tracking/1.jpg"  style="width: 80%;"  />
-<img src="../assets/tracking/2.jpg"  style="width: 80%;"  />
+##### 1st Spiral
+<img src="../assets/tracking/0.jpg"  style="zoom: 80%;"  />
+<img src="../assets/tracking/1.jpg"  style="zoom: 80%;"  />
+<img src="../assets/tracking/2.jpg"  style="zoom: 80%;"  />
 <img src="../assets/tracking/3.jpg"  style="width: 80%;"  />
 <img src="../assets/tracking/me1.jpg"  style="width: 80%;"  />
 <video  style="width: 80%;" controls>
@@ -123,6 +111,98 @@ configuration should be as simple as possible.
 <img src="../assets/tracking/7.jpg"  style="width: 80%;"  />
 <img src="../assets/tracking/5.jpg"  style="width: 80%;"  />
 
-### Electrical Design
 
-<img src="../assets/tracking/ee1.svg"  style="width: 80%;"  />
+#### Electrical Part 
+
+##### 1st Spiral - TMC2209
+
+1. SpeedyStepper.h
+	1. https://forum.arduino.cc/t/using-a-tmc2209-silent-stepper-motor-driver-with-an-arduino/666992/40)
+	2. https://forum.arduino.cc/t/using-a-tmc2209-silent-stepper-motor-driver-with-an-arduino/666992/14
+2. software serial
+	1. https://wiki.seeedstudio.com/xiao_esp32s3_pin_multiplexing/#usage-of-software-serial
+	2. https://arduino.stackexchange.com/questions/26240/which-pins-of-an-arduino-uno-can-be-used-as-tx-and-rx-pins-for-connecting-to-gsm#26277
+	3. https://github.com/SlashDevin/NeoSWSerial
+3. example code in TMC2209.h repo
+	1. https://github.com/janelia-arduino/TMC2209
+   
+<img src="../assets/final/sche.png"  style="width: 80%;"  />
+<img src="../assets/final/tmc1.jpg"  style="width: 80%;"  />
+
+   
+##### 2nd Spiral - DRV8428
+this is what I want to reproduce
+<video  style="width: 80%;" controls>
+<source src="../assets/tracking/example.mp4"  type="video/mp4">
+</video>
+
+<img src="../assets/final/e1.png"  style="width: 80%;"  />
+<img src="../assets/final/e2.png"  style="width: 80%;"  />
+<img src="../assets/final/interior2.png"  style="width: 80%;"  />
+<img src="../assets/final/trace2.png"  style="width: 80%;"  />
+
+<img src="../assets/final/drv4.jpg"  style="width: 80%;"  />
+<img src="../assets/final/drv1.jpg"  style="width: 80%;"  />
+<img src="../assets/final/drv2.jpg"  style="width: 80%;"  />
+<img src="../assets/final/drv3.jpg"  style="width: 80%;"  />
+
+
+##### 3rd Spiral
+<img src="../assets/final/interior.png"  style="width: 80%;"  />
+<img src="../assets/final/trace.png"  style="width: 80%;"  />
+<img src="../assets/final/trace_cut.png"  style="width: 80%;"  />
+<img src="../assets/final/trace_mods.png"  style="width: 80%;"  />
+<img src="../assets/week6/6.jpg" style="zoom:50%;" />
+
+Stepper-hbridge-xiao - https://modular-things.github.io/modular-things/things/stepper-hbridge-xiao/
+<img src="../assets/final/modular.png"  style="width: 100%;"  />
+
+fixed(resolder+reflash firmware) a few modular things, and then they work 
+<img src="../assets/final/mod1.jpg"  style="width: 80%;"  />
+
+#### Interface Part
+
+<!-- ### operation -->
+
+
+### Previous Idea Iterations
+
+#### 1st Version
+
+I was initially planning to develop a modular paper airplane folding machine. I find this project intriguing and drew inspiration from a LEGO creation. I am contemplating the possibility of creating a modularized, faster, and more flexible paper folding device. Through the combination of various modules, it can fold (almost) anything.
+
+
+
+- LEGO paper airplane maker
+{{< youtube -eNm6MYqgO8 >}}
+
+- Primary Paper Folds
+  
+<img src="../assets/final/folds.png" alt="avatar" width="60%" />
+  
+  - Z-Fold Machine
+  
+<img src="../assets/final/zfold.png" alt="avatar" />
+
+{{< youtube EK1xPAsIV9k >}}
+
+  - 3D printed Paper folding machine
+
+<img src="../assets/final/3d2.jpg" alt="avatar"  />
+
+{{< youtube Hg4_dVEAZho >}}
+
+#### 2nd Version
+Origami Folding by a Robotic Hand, this study, conducted by Kenta Tanaka, Yusuke Kamotani, and Yasuyoshi Yokokohji, explores the application of a robotic hand in the art of origami folding. Through their experiments, they demonstrate that a system comprised of four three-degree-of-freedom robotic arms can perform precise manipulation of paper, enabling it to accomplish intricate origami tasks. The findings of this research highlight the advanced capabilities of robotic hands in engaging in origami activities. [Link](https://www.fujipress.jp/jrm/rb/robot002000040550/)
+
+<img src="../assets/tracking/o1.jpg"  style="zoom: 70%;"  />
+<img src="../assets/tracking/o2.jpg"  style="zoom: 50%;"  />
+<img src="../assets/tracking/o3.jpg"  style="zoom: 50%;"  />
+
+</br></br>
+
+design purpose and goals
+- Design a robot that can fold a sheet of origami paper in half on a table as shown in Fig.1. The accuracy of folding must be the same as for a human and the robot
+configuration should be as simple as possible.
+- The approach to design a specialized machine should not be taken. In other words, keep the table flat and do not use any jigs.
+- Do not be constrained by the appearance of the human hand when designing a robot hand. 
