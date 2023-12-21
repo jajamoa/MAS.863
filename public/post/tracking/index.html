@@ -10,7 +10,7 @@
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/light.css' />
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/dark.css' />
     <link rel="stylesheet" href='https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/css/syntax.css' />
-    <title>Final Project - progress tracking - HTM(A)A | Chance&#39;s Sketchpad</title>
+    <title>Final Project - EMH Reader - HTM(A)A | Chance&#39;s Sketchpad</title>
     
     <link rel="icon" type="image/x-icon" href='/images/favicon.ico'>
     
@@ -26,7 +26,7 @@
 
 
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Final Project - progress tracking - HTM(A)A | Chance&#39;s Sketchpad" />
+<meta name="twitter:title" content="Final Project - EMH Reader - HTM(A)A | Chance&#39;s Sketchpad" />
 <meta name="twitter:description"
   content="Final project tracking page, record how to make something that fold (almost) anything strp by step." />
 <meta name="twitter:site" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/" />
@@ -36,17 +36,17 @@
 
 
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Final Project - progress tracking - HTM(A)A | Chance&#39;s Sketchpad">
+<meta property="og:title" content="Final Project - EMH Reader - HTM(A)A | Chance&#39;s Sketchpad">
 <meta property="og:description"
   content="Final project tracking page, record how to make something that fold (almost) anything strp by step." />
 <meta property="og:url" content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/tracking/" />
-<meta property="og:site_name" content="Final Project - progress tracking" />
+<meta property="og:site_name" content="Final Project - EMH Reader" />
 <meta property="og:image"
   content="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1024">
 
-<meta property="article:published_time" content="2023-09-12 16:32:11 -0400 EDT" />
+<meta property="article:published_time" content="2023-12-20 16:32:11 -0400 -0400" />
 
 
 
@@ -141,18 +141,18 @@
                   <span class="author">
                     <a href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/">Chance Jiajie Li</a></span><span
                     class="path-divider">/</span><strong class="css-truncate-target mr-1" style="max-width: 410px"><a
-                      href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/tracking/">Final Project - progress tracking</a></strong>
+                      href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/tracking/">Final Project - EMH Reader</a></strong>
                 </h1>
                 <div class="note m-0">
-                  Created <relative-time datetime="Tue, 12 Sep 2023 16:32:11 -0400"
+                  Created <relative-time datetime="Wed, 20 Dec 2023 16:32:11 -0400"
                     class="no-wrap">
-                    Tue, 12 Sep 2023 16:32:11 -0400</relative-time>
+                    Wed, 20 Dec 2023 16:32:11 -0400</relative-time>
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Wed, 13 Dec 2023 13:04:05 -0500"
+                  Modified <relative-time datetime="Thu, 21 Dec 2023 06:22:03 -0500"
                     class="no-wrap">
-                    Wed, 13 Dec 2023 13:04:05 -0500</relative-time>
+                    Thu, 21 Dec 2023 06:22:03 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      92 Words
+                      976 Words
                     
 
                   </div>
@@ -194,8 +194,153 @@
 
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
-                <article class="markdown-body entry-content container-lg"><h2 id="final-project---progress-tracking">Final Project - progress tracking</h2>
-<h3 id="overview">Overview</h3>
+                <article class="markdown-body entry-content container-lg"><h2 id="final-project---emh-reader">Final Project - EMH Reader</h2>
+<h3 id="introduction">Introduction</h3>
+<video  style="width: 100%;" controls>
+<source src="../assets/final/EMH.mp4"  type="video/mp4">
+</video>
+<p></br></br>
+Designing and constructing the <em><strong>Electro-Mech-Hydraulic(EMH) Reader</strong></em>, driven by interest for machinery and its interaction with paper, featuring a versatile robotic arm with hydraulic precision control for tasks including page turning.</p>
+<h3 id="tldr">TL;DR</h3>
+<p>Following the requirements and structure of this page <a href="https://academy.cba.mit.edu/classes/project_presentation/index.html">https://academy.cba.mit.edu/classes/project_presentation/index.html</a>, I summarize the content of this project as follows:</p>
+<ul>
+<li><strong>Answering</strong>
+<ul>
+<li><strong>What does it do?</strong>
+<ul>
+<li>It is a versatile robotic arm with hydraulic precision control, primarily designed for page turning, but capable of various automation tasks.</li>
+</ul>
+</li>
+<li><strong>Who&rsquo;s done what beforehand?</strong>
+<ul>
+<li>Disney Research&rsquo;s Robotic Manipulator: Disney Research developed a highly responsive robotic manipulator using a hybrid of hydraulic and pneumatic systems, capable of delicate tasks with lifelike motion. <a href="https://spectrum.ieee.org/disney-robot-with-air-water-actuators">Link</a></li>
+<li>Hydraulic Robotic Arms in Manufacturing: Hydraulic robotic arms are pivotal in manufacturing for tasks like palletizing and welding. These arms are known for their flexibility and efficiency. <a href="https://www.evsint.com/">Link</a></li>
+<li>Hydrabot: The Modular Electro-Hydraulic Robot Arm: Developed by the University of Waterloo, Hydrabot is a modular and reconfigurable robot arm that uses hydraulic actuators to enhance payload capacity and versatility. <a href="https://www.eng.uwaterloo.ca/~aalnaif/">Link</a></li>
+<li>Origami Folding by a Robotic Hand: This study by Kenta Tanaka, Yusuke Kamotani, and Yasuyoshi Yokokohji explores the use of a robotic hand in folding origami, demonstrating advanced capabilities in precise manipulation of paper. <a href="https://www.fujipress.jp/jrm/rb/robot002000040550/">Link</a></li>
+</ul>
+</li>
+<li><strong>What did you design?</strong>
+<ul>
+<li>A 3D-printed and laser-cut acrylic syringe holder to house the hydraulic system.</li>
+<li>A sub-system with stepper motor with a threaded shaft for precise pushing and pulling of the syringe.</li>
+<li>A 3 Degree of Freedom (3 DoF) robotic arm&rsquo;s mechanical design, featuring a scissor mechanism for elevation, a disc for lateral movement, and a linkage system for push-pull actions.</li>
+<li>A front-end control panel control the project.</li>
+</ul>
+</li>
+<li><strong>What materials and components were used? Where did they come from? How much did they cost?</strong></li>
+<li><strong>What parts and systems were made?</strong>
+<ul>
+<li><strong>Mechanical Components</strong>:
+<ul>
+<li>Stepper motor with a threaded shaft for precise syringe manipulation.</li>
+<li>3 DoF robotic arm with a scissor mechanism, lateral movement disc, and a linkage system.</li>
+</ul>
+</li>
+<li><strong>Hydraulic System</strong>:
+<ul>
+<li>Integration of hydraulic components for precise control and power.</li>
+<li>3D-printed and laser-cut acrylic syringe holder for housing the hydraulic system.</li>
+</ul>
+</li>
+<li><strong>Front-End Control Panel</strong>:
+<ul>
+<li>User interface design for manual control and programming of the robotic arm&rsquo;s actions.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>What processes were used?</strong>
+<ul>
+<li>system integration and packaging</li>
+<li>embedded microcontroller design, interfacing, and programming
+<ul>
+<li>front-end control panel</li>
+<li>remote controller</li>
+<li>stepper motor controller</li>
+<li>modular things debugging, fixing and customization</li>
+</ul>
+</li>
+<li>electronics design and production
+<ul>
+<li>remote controller</li>
+<li>stepper motor controller</li>
+</ul>
+</li>
+<li>additive fabrication processes / 3D design
+<ul>
+<li>3D printing all components in robotic arm
+<ul>
+<li><strong>Elevator Scissors</strong>: Mechanism for vertical movement, possibly using a scissor lift design.</li>
+<li><strong>Slides of Arms, Upper/Lower/Middle Arm Components</strong>: Components comprising the sliding sections of the robotic arms, including upper, lower, and middle arm segments.</li>
+<li><strong>Pan Rotating Structure</strong>: Rotational mechanism for panning or horizontal movement.</li>
+<li><strong>Arm Holding Platform</strong>: Platform for securing and holding the robotic arm.</li>
+<li><strong>Pins Connecting the Joints and Components</strong>: Fasteners used to connect and secure joints and components.</li>
+<li><strong>Rod to Actuate the Elevator</strong>: Rod used for elevating or lifting components, likely part of the scissor lift mechanism.</li>
+<li><strong>Locks for Different Syringes&rsquo; Handle</strong>: Locking mechanisms designed for various syringe handles.</li>
+<li><strong>Holder for Different Syringes</strong>: Device used to hold and secure different types of syringes.</li>
+<li><strong>Lock for Threaded Shaft</strong>: Locking mechanism for the threaded shaft to prevent movement.</li>
+<li><strong>Guide Rail Fixtures</strong>: Mechanical fixtures used to secure and guide rails, likely part of the frame and structural components.</li>
+</ul>
+</li>
+<li>3D printing all components in robotic arm
+<ul>
+<li><strong>Holder for the Driving-Side Syringe</strong>: A component designed to secure and control the syringe on the driving side of the system.</li>
+<li><strong>Holder for the Stepper Motor</strong>: A fixture designed to secure and position the stepper motor, which is responsible for controlling various movements.</li>
+<li><strong>Guide for Threaded Shaft (Preventing from Self-Rotating)</strong>: A guide mechanism that prevents the threaded shaft from rotating on its own.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>subtractive fabrication processes / 2D design
+<ul>
+<li><strong>Driving-Side Enclosure</strong>: An enclosure or box on the driving side of the system, serving both aesthetic and hydraulic pressure conduction functions.</li>
+<li><strong>Upgraded Holder for the Stepper Motor</strong>: An improved fixture designed to secure and position the stepper motor, addressing the issue of melting associated with the previous 3D-printed version when the motor heats up.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>What questions were answered?</strong>
+<ul>
+<li>How can an electronic hydraulic arm system be constructed at a low cost?</li>
+<li>How can hydraulic, electrical, and mechanical elements be combined to accomplish tasks within complex systems?</li>
+</ul>
+</li>
+<li><strong>What worked? What didn&rsquo;t?</strong>
+<ul>
+<li>What worked:
+<ul>
+<li>The design and construction of the EMH robotic arm with hydraulic precision control.</li>
+<li>Integration of mechanical, hydraulic, and electronic systems.</li>
+<li>Development of a user-friendly control interface for manual and programmed actions.</li>
+</ul>
+</li>
+<li>What didn&rsquo;t:
+<ul>
+<li>The control algorithm has not been written yet, and the current control relies on pre-defined rules (due to limited resources in this personal project). In the future, collaboration can be considered to enhance the system&rsquo;s ability for better generalization.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>How was it evaluated?</strong>
+<ul>
+<li>In a nutshell, the primary evaluation goal was to create a functional demo to verify the end-to-end success of page turning. This means that by pressing a button on a webpage, the mechanical arm successfully turns a physical book page, serving as a proof of concept.</li>
+</ul>
+</li>
+<li><strong>What are the implications?</strong>
+<ul>
+<li><strong>Cost-Effective Automation</strong>: By leveraging hydraulic flexibility to enhance force output within a constrained budget(&lt;$10), the project demonstrates a practical approach to achieving robust automation in economically limited environments.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="progress-tracking">Progress Tracking</h3>
+<ul>
+<li>conception</li>
+<li>construction</li>
+<li>and operation</li>
+</ul>
+<h3 id="idea-iterations">Idea Iterations</h3>
 <ul>
 <li>Design a robot that can fold a sheet of origami paper in half on a table as shown in Fig.1. The accuracy of folding must be the same as for a human and the robot
 configuration should be as simple as possible.</li>

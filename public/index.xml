@@ -6,8 +6,15 @@
     <description>Recent content on HTM(A)A | Chance&#39;s Sketchpad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Dec 2023 01:44:03 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2023 16:32:11 -0400</lastBuildDate>
     <atom:link href="https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Final Project - EMH Reader</title>
+      <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/tracking/</link>
+      <pubDate>Wed, 20 Dec 2023 16:32:11 -0400</pubDate>
+      <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/tracking/</guid>
+      <description>Final project tracking page, record how to make something that fold (almost) anything strp by step.</description>
+    </item>
     <item>
       <title>Week14 - wildcard week</title>
       <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week14/</link>
@@ -116,13 +123,6 @@ Please feel free to send me an email if you are interested in collaborating or s
       <pubDate>Wed, 13 Sep 2023 15:32:11 -0400</pubDate>
       <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/week1/</guid>
       <description>computer-aided design, model (raster, vector, 2D, 3D, render, animate, simulate, &amp;hellip;) a possible final project</description>
-    </item>
-    <item>
-      <title>Final Project - progress tracking</title>
-      <link>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/tracking/</link>
-      <pubDate>Tue, 12 Sep 2023 16:32:11 -0400</pubDate>
-      <guid>https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/post/tracking/</guid>
-      <description>Final project tracking page, record how to make something that fold (almost) anything strp by step.</description>
     </item>
     <item>
       <title>Final Project - paper folding machine</title>
