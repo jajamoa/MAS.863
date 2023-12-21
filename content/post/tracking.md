@@ -1,12 +1,12 @@
 ---
-title: "Final Project - EMH Reader"
+title: "Final Project - EMH Reader（This page is still under construction）"
 date: 2023-12-20T16:32:11-04:00
 draft: false
 pin: true
 summary: "Final project tracking page, record how to make something that fold (almost) anything strp by step."
 ---
 
-## Final Project - EMH Reader
+## Final Project - EMH Reader（This page is still under construction）
 
 <img src="../assets/final/cover2.jpg"  style="width: 80%;"  />
 
@@ -88,6 +88,23 @@ Following the requirements and structure of this page https://academy.cba.mit.ed
        - **Cost-Effective Automation**: By leveraging hydraulic flexibility to enhance force output within a constrained budget(<$10), the project demonstrates a practical approach to achieving robust automation in economically limited environments.
 
 ### Conception
+As someone with a longstanding fascination for the interplay between machines, paper, and their intricate interactions, this project represents a passionate endeavor to explore the creative possibilities at this intersection. 
+
+In the realm of machine building, the project's central objective is to maximize the potential of hydraulic technology. It aims to construct a highly cost-effective and extraordinarily versatile machine. This approach allows for a comprehensive exploration of hydraulic systems, emphasizing their role in achieving intricate movements and precise control. The core application of this machine lies in enhancing paper-related tasks, including page-turning and paper folding, while emphasizing the synergy between machine building and hydraulic technology for efficient and innovative solutions.
+
+<img src="../assets/final/readme.jpg"  style="zoom: 40%;"  />
+
+
+### System Integration
+
+The final project was a test and challenge of system integration. Neil repeatedly emphasized the principles of 80/20 and 95/5, which indeed manifested when I started working hands-on. Fortunately, I was able to successfully resolve all the issues and achieved a stable live demo effect on the open day. Here, I'll detail the three most memorable challenges I encountered during the system integration process.
+
+#### The stepper motor softened the support structure of the 3D print
+
+#### The weight of the mechanical platform was too heavy for ordinary syringes to support.
+
+#### The drive-side bracket, for aesthetic reasons, did not have enough support structures printed.
+
 
 ### Construction(progress tracking)
 
@@ -132,6 +149,7 @@ Following the requirements and structure of this page https://academy.cba.mit.ed
    
 ##### 2nd Spiral - DRV8428
 this is what I want to reproduce
+
 <video  style="width: 80%;" controls>
 <source src="../assets/final/drv.mp4"  type="video/mp4">
 </video>
@@ -161,6 +179,16 @@ fixed(resolder+reflash firmware) a few modular things, and then they work
 <img src="../assets/final/mod1.jpg"  style="width: 80%;"  />
 
 #### Interface Part
+I have built a minimalistic frontend website using React.js, TypeScript, and Vite. This website serves as a control interface for various functionalities related to modular devices. It includes features like scanning for devices, pairing them, disconnecting, individual motor calibration, and a control panel to showcase demos.
+
+For the development related to modular devices, I based my work on Jake's repository, which can be found at https://github.com/modular-things/modular-things-standalone.
+
+Regarding control, I have established a connection using sockets between the XIAO ESP32C3 and a button on a previous mill setup. This connection allows the machine to turn a page in a book when the button is pressed.
+
+<img src="../assets/final/ui.png"  style="width: 100%;"  />
+
+
+
 
 <!-- ### operation -->
 
