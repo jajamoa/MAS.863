@@ -16,7 +16,41 @@ individual assignment:</br>
 
 group assignment:</br>
 
-- [ ] measure the power consumption of an output device
+- [x] measure the power consumption of an output device
+
+
+## Group Assignment
+Vincy and I measured the power consumption of an output device, using a usb tester(thank you Alan for lending it to us)
+<img src="../assets/week10/g0.jpg" style="width:60%" />
+
+We measured the energy consumption of the stepper motor just after it was powered on, before rotation, during rotation, and after rotation.
+1. just after it was powered on - 5.3V, 0.0A, 0.0W
+
+<img src="../assets/week10/g1.jpg" style="width:80%" />
+
+At this initial stage, the motor was idle, drawing no current. The voltage was stable at 5.3V, but both the current and power consumption were at 0.0A and 0.0W, respectively, indicating no active energy use.
+
+2. before rotation - 5.3V, 0.037A, 0.196W
+
+<img src="../assets/week10/g2.jpg" style="width:80%" />
+
+Prior to rotation, the motor showed a slight increase in energy consumption. The voltage remained constant at 5.3V, but the current increased to 0.037A, resulting in a power consumption of 0.196W. This suggests minimal energy use in preparation for movement.
+
+3. during rotation - 4.756V, 0.325A, 1.568W
+
+<img src="../assets/week10/g3.jpg" style="width:80%" />
+
+This phase marked a significant rise in power usage, reflecting the motor's active work. The voltage slightly dropped to 4.756V, and the current surged to 0.325A. Consequently, the power consumption increased to 1.568W, indicating the energy required for the rotation of the motor.
+
+4. after rotation(being idle) - 4.623V, 0.335A, 1.548W
+<img src="../assets/week10/g4.jpg" style="width:80%" />
+
+Even after the rotation ceased, the motor continued to consume energy, albeit at a slightly reduced level compared to the active rotation phase. The voltage further decreased to 4.623V, and the current was measured at 0.335A, leading to a power consumption of 1.548W. This suggests that the motor still uses energy to maintain its static position after rotation.
+
+In summary, the stepper motor’s power consumption varied across different operational stages, with the highest energy use observed during active rotation.
+
+
+## Individual Assignment
 
 ### Idea
 
@@ -112,4 +146,8 @@ With reference to the data [here](https://www.adafruit.com/product/2201), the de
 <source src="../assets/week10/ep_3.mp4"  type="video/mp4">
 </video>
 <img src="../assets/week10/ep_4.jpg" style="zoom:50%;" />
+
+#### Soldering
+
+<img src="../assets/week10/ep_5.jpg" style="zoom:50%;" />
 
