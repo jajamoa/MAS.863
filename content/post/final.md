@@ -2,7 +2,7 @@
 title: "Final Project - paper folding machine"
 date: 2023-09-12T15:32:11-04:00
 draft: false
-pin: true
+pin: false
 summary: "Final project, plan to do a paper folding machine, which may be able to fold (almost) anything."
 ---
 

@@ -97,6 +97,6 @@ while True:
 
   ```
 
-<video  style="width: 100%;" controls>
+<video  style="width: 60%;" controls>
 <source src="../assets/week3/1.mp4"  type="video/mp4">
 </video>
