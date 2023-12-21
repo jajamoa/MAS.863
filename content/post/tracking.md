@@ -8,6 +8,7 @@ summary: "Final project tracking page, record how to make something that fold (a
 
 ## Final Project - EMH Reader
 
+<img src="../assets/final/cover2.jpg"  style="width: 80%;"  />
 
 ### Introduction  
 <video  style="width: 100%;" controls>
