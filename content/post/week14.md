@@ -6,7 +6,7 @@ pin: true
 summary: "design and produce something with a digital fabrication process not covered in another assignment"
 ---
 
-## Week13 - mechanical design
+## Week14 - wildcard week
 
 ### Assignment
 

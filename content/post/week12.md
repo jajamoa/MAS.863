@@ -16,7 +16,45 @@ individual assignment:</br>
 
 group assignment:</br>
 
-- [ ] compare as many tool options as possible
+- [x] compare as many tool options as possible
+
+
+## Group Assignment
+I used 3D Physic Library in this week's assignment, for 3D physics, there are three main libraries:
+
+1. Ammo.js
+   - Website: http://schteppe.github.io/ammo.js-demos/
+   - Git repository: https://github.com/kripken/ammo.js/
+   - Documentation: No documentation
+   - Direct JavaScript port of Bullet (a physics engine written in C++)
+   - A little heavy
+   - Still updated by a community
+2. Cannon.js
+   - Website: https://schteppe.github.io/cannon.js/
+   - Git repository: https://github.com/schteppe/cannon.js
+   - Documentation: http://schteppe.github.io/cannon.js/docs/
+   - Lighter than Ammo.js
+   - More comfortable to implement than Ammo.js
+   - Mostly maintained by one developer
+   - Hasn't been updated for many years
+   - There is a maintained fork
+3. Oimo.js
+   - Website: https://lo-th.github.io/Oimo.js/
+   - Git repository: https://github.com/lo-th/Oimo.js
+   - Documentation: http://lo-th.github.io/Oimo.js/docs.html
+   - Lighter than Ammo.js
+   - Easier to implement than Ammo.js
+   - Mostly maintained by one developer
+   - Hasn't been updated for 2 years
+4. Rapier
+   - Website: https://rapier.rs/
+   - Git repository: https://github.com/dimforge/rapier
+   - Documentation: https://rapier.rs/javascript3d/index.html
+   - Very similar to Cannon.js
+   - Good performance
+   - Currently maintained
+
+## Individual Assignment
 
 ### Idea
 
@@ -112,41 +150,6 @@ const String page PROGMEM = "<head>"
 
 
 ### 3D Rod
-
-#### 3D Physic Library
-For 3D physics, there are three main libraries:
-
-1. Ammo.js
-   - Website: http://schteppe.github.io/ammo.js-demos/
-   - Git repository: https://github.com/kripken/ammo.js/
-   - Documentation: No documentation
-   - Direct JavaScript port of Bullet (a physics engine written in C++)
-   - A little heavy
-   - Still updated by a community
-2. Cannon.js
-   - Website: https://schteppe.github.io/cannon.js/
-   - Git repository: https://github.com/schteppe/cannon.js
-   - Documentation: http://schteppe.github.io/cannon.js/docs/
-   - Lighter than Ammo.js
-   - More comfortable to implement than Ammo.js
-   - Mostly maintained by one developer
-   - Hasn't been updated for many years
-   - There is a maintained fork
-3. Oimo.js
-   - Website: https://lo-th.github.io/Oimo.js/
-   - Git repository: https://github.com/lo-th/Oimo.js
-   - Documentation: http://lo-th.github.io/Oimo.js/docs.html
-   - Lighter than Ammo.js
-   - Easier to implement than Ammo.js
-   - Mostly maintained by one developer
-   - Hasn't been updated for 2 years
-4. Rapier
-   - Website: https://rapier.rs/
-   - Git repository: https://github.com/dimforge/rapier
-   - Documentation: https://rapier.rs/javascript3d/index.html
-   - Very similar to Cannon.js
-   - Good performance
-   - Currently maintained
 
 #### Video
 <video  style="width: 80%;" controls>
