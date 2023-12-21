@@ -133,7 +133,7 @@ Following the requirements and structure of this page https://academy.cba.mit.ed
 ##### 2nd Spiral - DRV8428
 this is what I want to reproduce
 <video  style="width: 80%;" controls>
-<source src="../assets/tracking/example.mp4"  type="video/mp4">
+<source src="../assets/final/drv.mp4"  type="video/mp4">
 </video>
 
 <img src="../assets/final/e1.png"  style="width: 80%;"  />
