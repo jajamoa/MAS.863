@@ -160,6 +160,7 @@ Upon closer examination and analysis of the situation, I identified the root cau
 <img src="../assets/final/si_8.jpg"  style="zoom: 80%;"  />
 <img src="../assets/final/si_9.jpg"  style="zoom: 80%;"  />
 
+To address this challenge and rectify the issue, I promptly embarked on a redesign of the box housing. I incorporated the much-needed rearward constraints to ensure that the needles remained properly aligned and supported, even when operated simultaneously. After implementing these modifications, the machine's stability and performance improved significantly, allowing for successful operation and achieving the desired functionality. This experience underscored the importance of a well-thought-out design in the success of the project, and it served as a valuable lesson in balancing aesthetics with structural integrity in engineering projects.
 
 #### The upper platform tilted outward due to an off-center center of gravity.
 
@@ -195,7 +196,34 @@ This solution not only addressed the challenge but also highlighted the importan
 <img src="../assets/tracking/7.jpg"  style="width: 80%;"  />
 <img src="../assets/tracking/5.jpg"  style="width: 80%;"  />
 
-To address this challenge and rectify the issue, I promptly embarked on a redesign of the box housing. I incorporated the much-needed rearward constraints to ensure that the needles remained properly aligned and supported, even when operated simultaneously. After implementing these modifications, the machine's stability and performance improved significantly, allowing for successful operation and achieving the desired functionality. This experience underscored the importance of a well-thought-out design in the success of the project, and it served as a valuable lesson in balancing aesthetics with structural integrity in engineering projects.
+##### 2nd Spiral
+<img src="../assets/tracking/m1.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m2.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m3.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m4.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m5.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m6.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m7.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m8.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m9.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m10.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m11.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m12.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m13.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m14.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m15.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m16.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m17.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m18.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m19.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m20.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m21.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m22.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m23.jpg"  style="width: 80%;"  />
+
+<video  style="width: 80%;" controls>
+<source src="../assets/final/si_11.mp4"  type="video/mp4">
+</video>
 
 #### Electrical Part 
 
@@ -240,6 +268,68 @@ this is what I want to reproduce
 <img src="../assets/final/trace_mods.png"  style="width: 80%;"  />
 <img src="../assets/week6/6.jpg" style="zoom:50%;" />
 
+- code for remote control
+
+```c
+#include <WiFi.h>
+#include <ArduinoWebSocket.h>
+
+const char* ssid = "YourWiFiNetworkName"; // Your WiFi network name
+const char* password = "YourWiFiPassword"; // Your WiFi password
+
+const char* serverAddress = "YourServerIPAddress"; // WebSocket server address
+const int serverPort = YourServerPort; // WebSocket server port
+const char* webSocketPath = "/YourWebSocketPath"; // WebSocket path
+
+const int buttonPin = 2; // Button connected to GPIO 2
+bool buttonState = false;
+bool lastButtonState = false;
+
+WiFiClient wifiClient;
+WebSocketClient webSocketClient;
+
+void setup() {
+  Serial.begin(115200);
+
+  // Connect to WiFi
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connecting to WiFi...");
+  }
+  Serial.println("Connected to WiFi");
+
+  // Initialize the button
+  pinMode(buttonPin, INPUT);
+
+  // Connect to the WebSocket server
+  if (webSocketClient.connect(wifiClient, serverAddress, serverPort, webSocketPath)) {
+    Serial.println("Connected to WebSocket server");
+  } else {
+    Serial.println("Failed to connect to WebSocket server");
+  }
+}
+
+void loop() {
+  // Read the button state
+  buttonState = digitalRead(buttonPin);
+
+  // Send a command to the server when the button changes from pressed to released
+  if (buttonState == LOW && lastButtonState == HIGH) {
+    Serial.println("Button pressed, sending command to server");
+    webSocketClient.send("demo");
+  }
+
+  lastButtonState = buttonState;
+
+  // Handle WebSocket messages
+  webSocketClient.poll();
+
+  // Perform other tasks here
+}
+
+```
+
 Stepper-hbridge-xiao - https://modular-things.github.io/modular-things/things/stepper-hbridge-xiao/
 <img src="../assets/final/modular.png"  style="width: 100%;"  />
 
@@ -254,6 +344,126 @@ For the development related to modular devices, I based my work on Jake's reposi
 Regarding control, I have established a connection using sockets between the XIAO ESP32C3 and a button on a previous mill setup. This connection allows the machine to turn a page in a book when the button is pressed.
 
 <img src="../assets/final/ui.png"  style="width: 100%;"  />
+
+- main page code
+```js
+import "./App.css";
+import { Things, Node } from "./interfaces";
+
+// bring in the things,
+import * as mt from "./modular-things/modular-things";
+import "./modular-things/things/index";
+import { useState } from "react";
+
+function App() {
+  const [ globalThings, setGlobalThings ] = useState({});
+
+  const pair_device = async () => {
+    await mt.authorizePort();
+  };
+
+  const rescan_device = async () => {
+    await mt.rescan();
+  };
+
+  const disconnect_all = async () => {
+    await mt.disconnectAll();
+  };
+
+  const m1f = async () => {
+    await globalThings["motor1"].setCurrent(1.5);
+    await globalThings["motor1"].setStepsPerUnit(200/40);
+    await globalThings["motor1"].relative(-50, 200, 100);
+  };
+
+  const m1b = async () => {
+    // console.log(globalThings["motor1"])
+    await globalThings["motor1"].setCurrent(1.5);
+    await globalThings["motor1"].setStepsPerUnit(200/40);
+    await globalThings["motor1"].relative(50, 200, 100);
+  };
+
+  const m2f = async () => {
+    await globalThings["motor2"].setCurrent(1.5);
+    await globalThings["motor2"].setStepsPerUnit(200/40);
+    await globalThings["motor2"].relative(-50, 200, 100);
+  };
+
+  const m2b = async () => {
+    // console.log(globalThings["motor1"])
+    await globalThings["motor2"].setCurrent(1.5);
+    await globalThings["motor2"].setStepsPerUnit(200/40);
+    await globalThings["motor2"].relative(50, 200, 100);
+  };
+
+  const m3f = async () => {
+    await globalThings["motor3"].setCurrent(1.5);
+    await globalThings["motor3"].setStepsPerUnit(200/40);
+    await globalThings["motor3"].relative(-50, 200, 100);
+  };
+
+  const m3b = async () => {
+    // console.log(globalThings["motor1"])
+    await globalThings["motor3"].setCurrent(1.5);
+    await globalThings["motor3"].setStepsPerUnit(200/40);
+    await globalThings["motor3"].relative(50, 200, 100);
+  };
+
+  const allMove = async () => {
+    // console.log(globalThings["motor1"])
+    await globalThings["motor1"].setCurrent(1.5);
+    await globalThings["motor1"].setStepsPerUnit(200/40);
+    await globalThings["motor2"].setCurrent(1.5);
+    await globalThings["motor2"].setStepsPerUnit(200/40);
+    await globalThings["motor3"].setCurrent(1.5);
+    await globalThings["motor3"].setStepsPerUnit(200/40);
+
+    await Promise.all([
+        globalThings["motor1"].relative(750, 100, 100),
+        globalThings["motor2"].relative(750, 100, 100),
+        globalThings["motor3"].relative(750, 100, 100),
+    ]);
+
+    await Promise.all([
+        globalThings["motor1"].relative(-750, 100, 100),
+        globalThings["motor2"].relative(-750, 100, 100),
+        globalThings["motor3"].relative(-750, 100, 100),
+    ]);
+  };
+
+  mt.onThingListChange((things: Things) => {
+    setGlobalThings(things);
+  });
+
+  return (
+    <>
+      <div className="card">
+        <button onClick={pair_device}>Pair</button>
+        <button onClick={rescan_device}>Scan</button>
+        <button onClick={disconnect_all}>Disconnect All</button>
+      </div>
+      <div className="card">
+        <button onClick={m1f}>Motor 1 Fowared</button>
+        <button onClick={m1b}>Motor 1 Backwaed</button>
+      </div>
+      <div className="card">
+        <button onClick={m2f}>Motor 2 Fowared</button>
+        <button onClick={m2b}>Motor 2 Backwaed</button>
+      </div>
+      <div className="card">
+        <button onClick={m3f}>Motor 3 Fowared</button>
+        <button onClick={m3b}>Motor 3 Backwaed</button>
+      </div>
+      <div className="card">
+        <button onClick={allMove}>Demo</button>
+      </div>
+    </>
+  );
+}
+
+export default App;
+
+```
 
 
 

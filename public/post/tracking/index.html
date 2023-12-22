@@ -150,9 +150,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Thu, 21 Dec 2023 10:09:30 -0500"
+                  Modified <relative-time datetime="Fri, 22 Dec 2023 15:35:27 -0500"
                     class="no-wrap">
-                    Thu, 21 Dec 2023 10:09:30 -0500</relative-time>
+                    Fri, 22 Dec 2023 15:35:27 -0500</relative-time>
                   
                 </div>
               </div>
@@ -182,7 +182,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      2326 Words
+                      2799 Words
                     
 
                   </div>
@@ -457,6 +457,7 @@ In response to this setback, I promptly fabricated a new motor mount using acryl
 <p>Upon closer examination and analysis of the situation, I identified the root cause of this issue. The problem stemmed from the initial design of the box housing the needles. In my pursuit of aesthetics and a clean, minimalist look, I had inadvertently made a design mistake. The front end of the box had been designed flat, lacking the necessary rearward constraints for the foremost fingers. This design flaw became apparent when multiple needles exerted pressure together, leading to the instability in the drive-side bracket.</p>
 <img src="../assets/final/si_8.jpg"  style="zoom: 80%;"  />
 <img src="../assets/final/si_9.jpg"  style="zoom: 80%;"  />
+<p>To address this challenge and rectify the issue, I promptly embarked on a redesign of the box housing. I incorporated the much-needed rearward constraints to ensure that the needles remained properly aligned and supported, even when operated simultaneously. After implementing these modifications, the machine&rsquo;s stability and performance improved significantly, allowing for successful operation and achieving the desired functionality. This experience underscored the importance of a well-thought-out design in the success of the project, and it served as a valuable lesson in balancing aesthetics with structural integrity in engineering projects.</p>
 <h4 id="the-upper-platform-tilted-outward-due-to-an-off-center-center-of-gravity">The upper platform tilted outward due to an off-center center of gravity.</h4>
 <p>The story unfolds with an unexpected challenge: the upper platform&rsquo;s pronounced tilt towards the outer edge. This tilt occurred primarily because the upper arms of the scissor mechanism were positioned too far outward. As a result, the elevator structure lacked adequate constraints to prevent significant leaning.</p>
 <p>Realizing the gravity of this issue, I set out to find a solution that would restore balance and stability to the system. To achieve this, I decided to design and implement a support mechanism using a steel column. This column would act as a critical auxiliary support to counteract the undesired tilt.</p>
@@ -481,7 +482,33 @@ In response to this setback, I promptly fabricated a new motor mount using acryl
 <img src="../assets/tracking/6.jpg"  style="width: 80%;"  />
 <img src="../assets/tracking/7.jpg"  style="width: 80%;"  />
 <img src="../assets/tracking/5.jpg"  style="width: 80%;"  />
-<p>To address this challenge and rectify the issue, I promptly embarked on a redesign of the box housing. I incorporated the much-needed rearward constraints to ensure that the needles remained properly aligned and supported, even when operated simultaneously. After implementing these modifications, the machine&rsquo;s stability and performance improved significantly, allowing for successful operation and achieving the desired functionality. This experience underscored the importance of a well-thought-out design in the success of the project, and it served as a valuable lesson in balancing aesthetics with structural integrity in engineering projects.</p>
+<h5 id="2nd-spiral">2nd Spiral</h5>
+<img src="../assets/tracking/m1.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m2.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m3.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m4.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m5.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m6.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m7.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m8.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m9.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m10.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m11.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m12.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m13.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m14.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m15.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m16.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m17.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m18.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m19.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m20.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m21.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m22.jpg"  style="width: 80%;"  />
+<img src="../assets/tracking/m23.jpg"  style="width: 80%;"  />
+<video  style="width: 80%;" controls>
+<source src="../assets/final/si_11.mp4"  type="video/mp4">
+</video>
 <h4 id="electrical-part">Electrical Part</h4>
 <h5 id="1st-spiral---tmc2209">1st Spiral - TMC2209</h5>
 <ol>
@@ -525,7 +552,66 @@ In response to this setback, I promptly fabricated a new motor mount using acryl
 <img src="../assets/final/trace_cut.png"  style="width: 80%;"  />
 <img src="../assets/final/trace_mods.png"  style="width: 80%;"  />
 <img src="../assets/week6/6.jpg" style="zoom:50%;" />
-<p>Stepper-hbridge-xiao - <a href="https://modular-things.github.io/modular-things/things/stepper-hbridge-xiao/">https://modular-things.github.io/modular-things/things/stepper-hbridge-xiao/</a>
+<ul>
+<li>code for remote control</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;WiFi.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;ArduinoWebSocket.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">ssid</span> <span class="o">=</span> <span class="s">&#34;YourWiFiNetworkName&#34;</span><span class="p">;</span> <span class="c1">// Your WiFi network name
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">password</span> <span class="o">=</span> <span class="s">&#34;YourWiFiPassword&#34;</span><span class="p">;</span> <span class="c1">// Your WiFi password
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">serverAddress</span> <span class="o">=</span> <span class="s">&#34;YourServerIPAddress&#34;</span><span class="p">;</span> <span class="c1">// WebSocket server address
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">int</span> <span class="n">serverPort</span> <span class="o">=</span> <span class="n">YourServerPort</span><span class="p">;</span> <span class="c1">// WebSocket server port
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">webSocketPath</span> <span class="o">=</span> <span class="s">&#34;/YourWebSocketPath&#34;</span><span class="p">;</span> <span class="c1">// WebSocket path
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">const</span> <span class="kt">int</span> <span class="n">buttonPin</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// Button connected to GPIO 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">bool</span> <span class="n">buttonState</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">bool</span> <span class="n">lastButtonState</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">WiFiClient</span> <span class="n">wifiClient</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">WebSocketClient</span> <span class="n">webSocketClient</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Connect to WiFi
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">WiFi</span><span class="p">.</span><span class="nf">begin</span><span class="p">(</span><span class="n">ssid</span><span class="p">,</span> <span class="n">password</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="n">WiFi</span><span class="p">.</span><span class="nf">status</span><span class="p">()</span> <span class="o">!=</span> <span class="n">WL_CONNECTED</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Connecting to WiFi...&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Connected to WiFi&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Initialize the button
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nf">pinMode</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">,</span> <span class="n">INPUT</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Connect to the WebSocket server
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="n">webSocketClient</span><span class="p">.</span><span class="nf">connect</span><span class="p">(</span><span class="n">wifiClient</span><span class="p">,</span> <span class="n">serverAddress</span><span class="p">,</span> <span class="n">serverPort</span><span class="p">,</span> <span class="n">webSocketPath</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Connected to WebSocket server&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Failed to connect to WebSocket server&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// Read the button state
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">buttonState</span> <span class="o">=</span> <span class="nf">digitalRead</span><span class="p">(</span><span class="n">buttonPin</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Send a command to the server when the button changes from pressed to released
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="n">buttonState</span> <span class="o">==</span> <span class="n">LOW</span> <span class="o">&amp;&amp;</span> <span class="n">lastButtonState</span> <span class="o">==</span> <span class="n">HIGH</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Serial</span><span class="p">.</span><span class="nf">println</span><span class="p">(</span><span class="s">&#34;Button pressed, sending command to server&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">webSocketClient</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="s">&#34;demo&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">lastButtonState</span> <span class="o">=</span> <span class="n">buttonState</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Handle WebSocket messages
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="n">webSocketClient</span><span class="p">.</span><span class="nf">poll</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// Perform other tasks here
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>Stepper-hbridge-xiao - <a href="https://modular-things.github.io/modular-things/things/stepper-hbridge-xiao/">https://modular-things.github.io/modular-things/things/stepper-hbridge-xiao/</a>
 <img src="../assets/final/modular.png"  style="width: 100%;"  /></p>
 <p>fixed(resolder+reflash firmware) a few modular things, and then they work
 <img src="../assets/final/mod1.jpg"  style="width: 80%;"  /></p>
@@ -534,7 +620,125 @@ In response to this setback, I promptly fabricated a new motor mount using acryl
 <p>For the development related to modular devices, I based my work on Jake&rsquo;s repository, which can be found at <a href="https://github.com/modular-things/modular-things-standalone">https://github.com/modular-things/modular-things-standalone</a>.</p>
 <p>Regarding control, I have established a connection using sockets between the XIAO ESP32C3 and a button on a previous mill setup. This connection allows the machine to turn a page in a book when the button is pressed.</p>
 <img src="../assets/final/ui.png"  style="width: 100%;"  />
-<!-- ### operation -->
+<ul>
+<li>main page code</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="s2">&#34;./App.css&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">Things</span><span class="p">,</span> <span class="nx">Node</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;./interfaces&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// bring in the things,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">mt</span> <span class="nx">from</span> <span class="s2">&#34;./modular-things/modular-things&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="s2">&#34;./modular-things/things/index&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="p">[</span> <span class="nx">globalThings</span><span class="p">,</span> <span class="nx">setGlobalThings</span> <span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">({});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">pair_device</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">mt</span><span class="p">.</span><span class="nx">authorizePort</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">rescan_device</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">mt</span><span class="p">.</span><span class="nx">rescan</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">disconnect_all</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">mt</span><span class="p">.</span><span class="nx">disconnectAll</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">m1f</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">m1b</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// console.log(globalThings[&#34;motor1&#34;])
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">m2f</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">m2b</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// console.log(globalThings[&#34;motor1&#34;])
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">m3f</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">m3b</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// console.log(globalThings[&#34;motor1&#34;])
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">allMove</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// console.log(globalThings[&#34;motor1&#34;])
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">setCurrent</span><span class="p">(</span><span class="mf">1.5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">setStepsPerUnit</span><span class="p">(</span><span class="mi">200</span><span class="o">/</span><span class="mi">40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="mi">750</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="mi">750</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="mi">750</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor1&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="o">-</span><span class="mi">750</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor2&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="o">-</span><span class="mi">750</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">globalThings</span><span class="p">[</span><span class="s2">&#34;motor3&#34;</span><span class="p">].</span><span class="nx">relative</span><span class="p">(</span><span class="o">-</span><span class="mi">750</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">mt</span><span class="p">.</span><span class="nx">onThingListChange</span><span class="p">((</span><span class="nx">things</span><span class="o">:</span> <span class="nx">Things</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">setGlobalThings</span><span class="p">(</span><span class="nx">things</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;card&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">pair_device</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Pair</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">rescan_device</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Scan</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">disconnect_all</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Disconnect</span> <span class="nx">All</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;card&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">m1f</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Motor</span> <span class="mi">1</span> <span class="nx">Fowared</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">m1b</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Motor</span> <span class="mi">1</span> <span class="nx">Backwaed</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;card&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">m2f</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Motor</span> <span class="mi">2</span> <span class="nx">Fowared</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">m2b</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Motor</span> <span class="mi">2</span> <span class="nx">Backwaed</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;card&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">m3f</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Motor</span> <span class="mi">3</span> <span class="nx">Fowared</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">m3b</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Motor</span> <span class="mi">3</span> <span class="nx">Backwaed</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;card&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">allMove</span><span class="p">}</span><span class="o">&gt;</span><span class="nx">Demo</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</span></span></code></pre></div><!-- ### operation -->
 <h3 id="previous-idea-iterations">Previous Idea Iterations</h3>
 <h4 id="1st-version">1st Version</h4>
 <p>I was initially planning to develop a modular paper airplane folding machine. I find this project intriguing and drew inspiration from a LEGO creation. I am contemplating the possibility of creating a modularized, faster, and more flexible paper folding device. Through the combination of various modules, it can fold (almost) anything.</p>
