@@ -1,5 +1,8 @@
 # relativeURLs = false
-baseURL = "https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/"
+relativeURLs = true
+canonifyURLs = false
+
+# baseURL = "https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/"
 languageCode = "en-us"
 title = "HTM(A)A | Chance's Sketchpad"
 theme = "github-style"
