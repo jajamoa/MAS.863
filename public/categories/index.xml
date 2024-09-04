@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on HTM(A)A | Chance&#39;s Sketchpad</title>
-    <link>/categories/</link>
+    <link>https://fab.cba.mit.edu/classes/863.23/CBA/people/Chance/categories/</link>
     <description>Recent content in Categories on HTM(A)A | Chance&#39;s Sketchpad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://fab.cba.mit.edu/classes/863.23/CBA/people/Chance/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

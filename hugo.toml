@@ -1,8 +1,8 @@
 # relativeURLs = false
-relativeURLs = true
-canonifyURLs = false
+# relativeURLs = true
+# canonifyURLs = false
 
-# baseURL = "https://fab.cba.mit.edu/classes/MAS.863/CBA/people/Chance/"
+baseURL = "https://fab.cba.mit.edu/classes/863.23/CBA/people/Chance"
 languageCode = "en-us"
 title = "HTM(A)A | Chance's Sketchpad"
 theme = "github-style"
@@ -14,10 +14,10 @@ author = "Chance Jiajie Li"
 description = "Graduate Student @mitmedialab | prev @MicrosoftResearch @civic-data-design-lab"
 company = "Massachusetts Institute of Technology"
 CompanyURL = "https://mit.edu/"
-github = "LeeJAJA"
+github = "jajamoa"
 linkedin = "chanceli"
 email = "jiajie@mit.edu"
-url = "https://jiajie.media/"
+url = "https://www.media.mit.edu/people/jiajie/overview/"
 keywords = "MIT, MAS.863, How To Make (almost) Anything 2023"
 rss = true
 lastmod = true
